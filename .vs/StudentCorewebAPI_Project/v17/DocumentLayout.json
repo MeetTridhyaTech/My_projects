@@ -75,8 +75,7 @@
               "RelativeToolTip": "StudentCorewebAPI_Project\\Repository_Interface\\IUserRepository.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwBIAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T07:43:24.345Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T07:43:24.345Z"
             },
             {
               "$type": "Document",
@@ -88,8 +87,7 @@
               "RelativeToolTip": "StudentCorewebAPI_Project\\Services\\JwtService.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAuwB0AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T07:23:06.778Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T07:23:06.778Z"
             },
             {
               "$type": "Document",
@@ -101,8 +99,7 @@
               "RelativeToolTip": "StudentCorewebAPI_Project\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T07:16:05.918Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T07:16:05.918Z"
             },
             {
               "$type": "Document",
@@ -114,8 +111,7 @@
               "RelativeToolTip": "StudentCorewebAPI_Project\\Enums\\ApiMessages.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T08:35:14.013Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-18T08:35:14.013Z"
             },
             {
               "$type": "Document",
@@ -127,8 +123,7 @@
               "RelativeToolTip": "StudentCorewebAPI_Project\\Enums\\EnumMessages.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T08:31:12.317Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-18T08:31:12.317Z"
             },
             {
               "$type": "Document",
@@ -153,8 +148,7 @@
               "RelativeToolTip": "StudentCorewebAPI_Project\\Enums\\UserRoleEnum.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T05:44:00.139Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T05:44:00.139Z"
             },
             {
               "$type": "Document",
@@ -166,8 +160,7 @@
               "RelativeToolTip": "StudentCorewebAPI_Project\\Repository\\UserRepository.cs",
               "ViewState": "AgIAAJQAAAAAAAAAAAA2wKIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T11:45:29.057Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-11T11:45:29.057Z"
             },
             {
               "$type": "Document",
@@ -179,8 +172,7 @@
               "RelativeToolTip": "StudentCorewebAPI_Project\\Models\\Role.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T10:13:12.971Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-11T10:13:12.971Z"
             }
           ]
         }
