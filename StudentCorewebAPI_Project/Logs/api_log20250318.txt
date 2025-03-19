@@ -1,0 +1,1331 @@
+2025-03-18 10:21:44.936 +05:30 [INF] User profile is available. Using 'C:\Users\DELL\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-18 10:21:45.693 +05:30 [INF] Now listening on: https://localhost:7047
+2025-03-18 10:21:45.696 +05:30 [INF] Now listening on: http://localhost:5118
+2025-03-18 10:21:45.960 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-18 10:21:45.962 +05:30 [INF] Hosting environment: Development
+2025-03-18 10:21:45.965 +05:30 [INF] Content root path: C:\Users\DELL\source\repos\StudentCorewebAPI_Project\StudentCorewebAPI_Project
+2025-03-18 10:21:47.592 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.html - null null
+2025-03-18 10:21:48.342 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.html - 200 null text/html;charset=utf-8 772.0825ms
+2025-03-18 10:21:48.394 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.js - null null
+2025-03-18 10:21:48.394 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-18 10:21:48.419 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.js - 200 null application/javascript;charset=utf-8 25.2114ms
+2025-03-18 10:21:48.438 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_vs/browserLink - null null
+2025-03-18 10:21:48.459 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 65.4552ms
+2025-03-18 10:21:48.564 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_vs/browserLink - 200 null text/javascript; charset=UTF-8 126.2937ms
+2025-03-18 10:21:49.013 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - null null
+2025-03-18 10:21:49.056 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 44.5751ms
+2025-03-18 10:22:24.230 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/auth/login - application/json 59
+2025-03-18 10:22:24.254 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project)'
+2025-03-18 10:22:24.322 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(StudentCorewebAPI_Project.Models.LoginRequest) on controller StudentCorewebAPI_Project.Controllers.AuthController (StudentCorewebAPI_Project).
+2025-03-18 10:22:27.636 +05:30 [INF] Executed DbCommand (270ms) [Parameters=[@__loginRequest_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__loginRequest_Email_0 AND [u].[IsDeleted] = CAST(0 AS bit)
+2025-03-18 10:22:28.922 +05:30 [INF] Executed DbCommand (30ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[RoleID], [r].[RoleName]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleID] = [r].[RoleID]
+WHERE [u].[UserId] = @__user_Id_0
+2025-03-18 10:22:29.048 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[LoginResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 10:22:29.098 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project) in 4761.413ms
+2025-03-18 10:22:29.103 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project)'
+2025-03-18 10:22:29.112 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 4858.8981 ms
+2025-03-18 10:22:29.135 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/auth/login - 200 null application/json; charset=utf-8 4930.315ms
+2025-03-18 10:23:14.804 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/User - application/json 163
+2025-03-18 10:23:14.971 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddUser (StudentCorewebAPI_Project)'
+2025-03-18 10:23:14.982 +05:30 [INF] Route matched with {action = "AddUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddUser(StudentCorewebAPI_Project.DTOs.AddUserDto) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 10:23:15.127 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-03-18 10:23:15.171 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.AddUser (StudentCorewebAPI_Project) in 185.6067ms
+2025-03-18 10:23:15.175 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddUser (StudentCorewebAPI_Project)'
+2025-03-18 10:23:15.177 +05:30 [INF] HTTP POST /api/User responded 400 in 208.6971 ms
+2025-03-18 10:23:15.181 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/User - 400 null application/problem+json; charset=utf-8 378.8611ms
+2025-03-18 10:25:10.771 +05:30 [INF] User profile is available. Using 'C:\Users\DELL\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-18 10:25:11.262 +05:30 [INF] Now listening on: https://localhost:7047
+2025-03-18 10:25:11.265 +05:30 [INF] Now listening on: http://localhost:5118
+2025-03-18 10:25:11.676 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-18 10:25:11.679 +05:30 [INF] Hosting environment: Development
+2025-03-18 10:25:11.681 +05:30 [INF] Content root path: C:\Users\DELL\source\repos\StudentCorewebAPI_Project\StudentCorewebAPI_Project
+2025-03-18 10:25:12.268 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.html - null null
+2025-03-18 10:25:12.699 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.html - 200 null text/html;charset=utf-8 442.4725ms
+2025-03-18 10:25:12.730 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.js - null null
+2025-03-18 10:25:12.730 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-18 10:25:12.730 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_vs/browserLink - null null
+2025-03-18 10:25:12.761 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.js - 200 null application/javascript;charset=utf-8 30.9314ms
+2025-03-18 10:25:12.801 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 71.6046ms
+2025-03-18 10:25:12.853 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_vs/browserLink - 200 null text/javascript; charset=UTF-8 123.2341ms
+2025-03-18 10:25:13.236 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - null null
+2025-03-18 10:25:13.272 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 37.119ms
+2025-03-18 10:25:46.133 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/api/User/search - null null
+2025-03-18 10:25:46.232 +05:30 [INF] Failed to validate the token.
+System.ArgumentException: IDX14309: Unable to decode the initialization vector as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2025-03-18 10:25:46.332 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14309: Unable to decode the initialization vector as Base64Url encoded string.
+2025-03-18 10:25:46.347 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|Manager)
+2025-03-18 10:25:46.364 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-18 10:25:46.369 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/api/User/search - 401 0 null 236.5264ms
+2025-03-18 10:26:57.237 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/auth/login - application/json 59
+2025-03-18 10:26:57.247 +05:30 [INF] Failed to validate the token.
+System.ArgumentException: IDX14309: Unable to decode the initialization vector as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2025-03-18 10:26:57.286 +05:30 [INF] Bearer was not authenticated. Failure message: IDX14309: Unable to decode the initialization vector as Base64Url encoded string.
+2025-03-18 10:26:57.297 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project)'
+2025-03-18 10:26:57.369 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(StudentCorewebAPI_Project.Models.LoginRequest) on controller StudentCorewebAPI_Project.Controllers.AuthController (StudentCorewebAPI_Project).
+2025-03-18 10:27:00.531 +05:30 [INF] Executed DbCommand (126ms) [Parameters=[@__loginRequest_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__loginRequest_Email_0 AND [u].[IsDeleted] = CAST(0 AS bit)
+2025-03-18 10:27:01.816 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[RoleID], [r].[RoleName]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleID] = [r].[RoleID]
+WHERE [u].[UserId] = @__user_Id_0
+2025-03-18 10:27:01.876 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[LoginResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 10:27:01.917 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project) in 4537.3836ms
+2025-03-18 10:27:01.921 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project)'
+2025-03-18 10:27:01.927 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 4633.2131 ms
+2025-03-18 10:27:01.944 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/auth/login - 200 null application/json; charset=utf-8 4707.3295ms
+2025-03-18 10:27:49.232 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/api/User/search - null null
+2025-03-18 10:27:49.325 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.GetAllUsers (StudentCorewebAPI_Project)'
+2025-03-18 10:27:49.342 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers(PaginationParams) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 10:27:49.456 +05:30 [INF] Fetching users with Query: , SortBy: , SortOrder: false, PageNumber: 1, PageSize: 10
+2025-03-18 10:27:49.557 +05:30 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit)
+2025-03-18 10:27:49.635 +05:30 [INF] Executed DbCommand (49ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [u].[FirstName]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2025-03-18 10:27:49.652 +05:30 [INF] Users retrieved successfully.
+2025-03-18 10:27:49.655 +05:30 [INF] Executing OkObjectResult, writing value of type 'PagedResponse`1[[StudentCorewebAPI_Project.Models.User, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 10:27:49.672 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.GetAllUsers (StudentCorewebAPI_Project) in 326.5473ms
+2025-03-18 10:27:49.676 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.GetAllUsers (StudentCorewebAPI_Project)'
+2025-03-18 10:27:49.678 +05:30 [INF] HTTP GET /api/User/search responded 200 in 356.2919 ms
+2025-03-18 10:27:49.682 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/api/User/search - 200 null application/json; charset=utf-8 452.9358ms
+2025-03-18 10:30:02.529 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/User - application/json 183
+2025-03-18 10:30:02.606 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddUser (StudentCorewebAPI_Project)'
+2025-03-18 10:30:02.618 +05:30 [INF] Route matched with {action = "AddUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddUser(StudentCorewebAPI_Project.DTOs.AddUserDto) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 10:30:02.701 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-03-18 10:30:02.757 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.AddUser (StudentCorewebAPI_Project) in 134.5337ms
+2025-03-18 10:30:02.761 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddUser (StudentCorewebAPI_Project)'
+2025-03-18 10:30:02.764 +05:30 [INF] HTTP POST /api/User responded 400 in 157.9469 ms
+2025-03-18 10:30:02.770 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/User - 400 null application/problem+json; charset=utf-8 240.4597ms
+2025-03-18 10:30:54.768 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/User - application/json 192
+2025-03-18 10:30:54.783 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddUser (StudentCorewebAPI_Project)'
+2025-03-18 10:30:54.786 +05:30 [INF] Route matched with {action = "AddUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddUser(StudentCorewebAPI_Project.DTOs.AddUserDto) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 10:30:55.629 +05:30 [INF] Executed DbCommand (42ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = Int64), @p6='?' (Size = 4000), @p7='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [Email], [FirstName], [IsDeleted], [LastName], [Mobile], [PasswordHash], [PasswordSalt])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-03-18 10:30:55.676 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__userDto_RoleID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleID], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleID] = @__userDto_RoleID_0
+2025-03-18 10:30:55.682 +05:30 [ERR] Failed to add user.
+2025-03-18 10:30:55.686 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[StudentCorewebAPI_Project.DTOs.UserResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 10:30:55.700 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.AddUser (StudentCorewebAPI_Project) in 910.5218ms
+2025-03-18 10:30:55.702 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddUser (StudentCorewebAPI_Project)'
+2025-03-18 10:30:55.705 +05:30 [INF] HTTP POST /api/User responded 400 in 922.0500 ms
+2025-03-18 10:30:55.709 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/User - 400 null application/json; charset=utf-8 941.7011ms
+2025-03-18 11:43:22.133 +05:30 [INF] User profile is available. Using 'C:\Users\DELL\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-18 11:43:22.904 +05:30 [INF] Now listening on: https://localhost:7047
+2025-03-18 11:43:22.906 +05:30 [INF] Now listening on: http://localhost:5118
+2025-03-18 11:43:23.145 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-18 11:43:23.148 +05:30 [INF] Hosting environment: Development
+2025-03-18 11:43:23.150 +05:30 [INF] Content root path: C:\Users\DELL\source\repos\StudentCorewebAPI_Project\StudentCorewebAPI_Project
+2025-03-18 11:43:23.913 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.html - null null
+2025-03-18 11:43:24.456 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.html - 200 null text/html;charset=utf-8 558.0777ms
+2025-03-18 11:43:24.503 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.js - null null
+2025-03-18 11:43:24.503 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-18 11:43:24.560 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.js - 200 null application/javascript;charset=utf-8 53.6057ms
+2025-03-18 11:43:24.583 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_vs/browserLink - null null
+2025-03-18 11:43:24.612 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 110.0382ms
+2025-03-18 11:43:24.694 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_vs/browserLink - 200 null text/javascript; charset=UTF-8 110.2637ms
+2025-03-18 11:43:25.067 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - null null
+2025-03-18 11:43:25.105 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 39.9266ms
+2025-03-18 11:44:26.561 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/auth/login - application/json 59
+2025-03-18 11:44:26.606 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project)'
+2025-03-18 11:44:26.663 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(StudentCorewebAPI_Project.Models.LoginRequest) on controller StudentCorewebAPI_Project.Controllers.AuthController (StudentCorewebAPI_Project).
+2025-03-18 11:44:29.871 +05:30 [INF] Executed DbCommand (173ms) [Parameters=[@__loginRequest_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__loginRequest_Email_0 AND [u].[IsDeleted] = CAST(0 AS bit)
+2025-03-18 11:44:31.136 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[RoleID], [r].[RoleName]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleID] = [r].[RoleID]
+WHERE [u].[UserId] = @__user_Id_0
+2025-03-18 11:44:31.233 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[LoginResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 11:44:31.274 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project) in 4601.169ms
+2025-03-18 11:44:31.278 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project)'
+2025-03-18 11:44:31.284 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 4681.4681 ms
+2025-03-18 11:44:31.305 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/auth/login - 200 null application/json; charset=utf-8 4745.0982ms
+2025-03-18 11:45:38.568 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate - application/json 175
+2025-03-18 11:45:38.727 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 11:45:38.739 +05:30 [INF] Route matched with {action = "AddOrUpdateUserDto", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddOrUpdateUserDto(System.Nullable`1[System.Guid], StudentCorewebAPI_Project.DTOs.AddUserDto) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 11:45:39.793 +05:30 [INF] Executed DbCommand (29ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = Int64), @p6='?' (Size = 4000), @p7='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [Email], [FirstName], [IsDeleted], [LastName], [Mobile], [PasswordHash], [PasswordSalt])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-03-18 11:45:39.837 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__userDto_RoleID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleID], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleID] = @__userDto_RoleID_0
+2025-03-18 11:45:39.845 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[StudentCorewebAPI_Project.DTOs.UserResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 11:45:39.866 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project) in 1120.9492ms
+2025-03-18 11:45:39.870 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 11:45:39.875 +05:30 [INF] HTTP POST /api/User/AddOrUpdate responded 400 in 1150.9455 ms
+2025-03-18 11:45:39.879 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate - 400 null application/json; charset=utf-8 1312.216ms
+2025-03-18 11:47:30.556 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate - application/json 175
+2025-03-18 11:47:30.596 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 11:47:30.604 +05:30 [INF] Route matched with {action = "AddOrUpdateUserDto", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddOrUpdateUserDto(System.Nullable`1[System.Guid], StudentCorewebAPI_Project.DTOs.AddUserDto) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 11:47:31.213 +05:30 [INF] Executed DbCommand (274ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = Int64), @p6='?' (Size = 4000), @p7='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [Email], [FirstName], [IsDeleted], [LastName], [Mobile], [PasswordHash], [PasswordSalt])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-03-18 11:47:31.342 +05:30 [INF] Executed DbCommand (115ms) [Parameters=[@__userDto_RoleID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleID], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleID] = @__userDto_RoleID_0
+2025-03-18 11:47:31.401 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [UserRoles] ([Id], [RoleID], [UserId])
+VALUES (@p0, @p1, @p2);
+2025-03-18 11:47:31.410 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[StudentCorewebAPI_Project.DTOs.UserResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 11:47:31.421 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project) in 808.7129ms
+2025-03-18 11:47:31.425 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 11:47:31.428 +05:30 [INF] HTTP POST /api/User/AddOrUpdate responded 200 in 831.6758 ms
+2025-03-18 11:47:31.434 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate - 200 null application/json; charset=utf-8 878.3103ms
+2025-03-18 11:47:44.638 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/api/User/search - null null
+2025-03-18 11:47:44.660 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.GetAllUsers (StudentCorewebAPI_Project)'
+2025-03-18 11:47:44.674 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers(PaginationParams) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 11:47:44.691 +05:30 [INF] Fetching users with Query: , SortBy: , SortOrder: false, PageNumber: 1, PageSize: 10
+2025-03-18 11:47:44.787 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit)
+2025-03-18 11:47:44.834 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [u].[FirstName]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2025-03-18 11:47:44.846 +05:30 [INF] Users retrieved successfully.
+2025-03-18 11:47:44.849 +05:30 [INF] Executing OkObjectResult, writing value of type 'PagedResponse`1[[StudentCorewebAPI_Project.Models.User, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 11:47:44.865 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.GetAllUsers (StudentCorewebAPI_Project) in 187.4477ms
+2025-03-18 11:47:44.869 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.GetAllUsers (StudentCorewebAPI_Project)'
+2025-03-18 11:47:44.872 +05:30 [INF] HTTP GET /api/User/search responded 200 in 212.7823 ms
+2025-03-18 11:47:44.878 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/api/User/search - 200 null application/json; charset=utf-8 240.6532ms
+2025-03-18 11:49:02.867 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate?id=ad45682d-2138-40a3-7f2d-08dd621a2171 - application/json 186
+2025-03-18 11:49:02.890 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 11:49:02.892 +05:30 [INF] Route matched with {action = "AddOrUpdateUserDto", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddOrUpdateUserDto(System.Nullable`1[System.Guid], StudentCorewebAPI_Project.DTOs.AddUserDto) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 11:49:02.944 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0 AND [u].[IsDeleted] = CAST(0 AS bit)
+2025-03-18 11:49:02.975 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@p4='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [FirstName] = @p1, [LastName] = @p2, [Mobile] = @p3
+OUTPUT 1
+WHERE [Id] = @p4;
+2025-03-18 11:49:02.991 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__userDto_RoleID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleID], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleID] = @__userDto_RoleID_0
+2025-03-18 11:49:02.996 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[StudentCorewebAPI_Project.DTOs.UserResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 11:49:02.999 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project) in 102.9749ms
+2025-03-18 11:49:03.003 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 11:49:03.005 +05:30 [INF] HTTP POST /api/User/AddOrUpdate responded 200 in 115.4546 ms
+2025-03-18 11:49:03.009 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate?id=ad45682d-2138-40a3-7f2d-08dd621a2171 - 200 null application/json; charset=utf-8 142.9201ms
+2025-03-18 11:53:39.072 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate - application/json 186
+2025-03-18 11:53:39.100 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 11:53:39.104 +05:30 [INF] Route matched with {action = "AddOrUpdateUserDto", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddOrUpdateUserDto(System.Nullable`1[System.Guid], StudentCorewebAPI_Project.DTOs.AddUserDto) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 11:53:39.435 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = Int64), @p6='?' (Size = 4000), @p7='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [Email], [FirstName], [IsDeleted], [LastName], [Mobile], [PasswordHash], [PasswordSalt])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-03-18 11:53:39.448 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__userDto_RoleID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleID], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleID] = @__userDto_RoleID_0
+2025-03-18 11:53:39.461 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [UserRoles] ([Id], [RoleID], [UserId])
+VALUES (@p0, @p1, @p2);
+2025-03-18 11:53:39.467 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[StudentCorewebAPI_Project.DTOs.UserResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 11:53:39.470 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project) in 356.9249ms
+2025-03-18 11:53:39.475 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 11:53:39.477 +05:30 [INF] HTTP POST /api/User/AddOrUpdate responded 200 in 376.8374 ms
+2025-03-18 11:53:39.482 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate - 200 null application/json; charset=utf-8 411.9602ms
+2025-03-18 11:53:50.869 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate - application/json 186
+2025-03-18 11:53:50.896 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 11:53:50.899 +05:30 [INF] Route matched with {action = "AddOrUpdateUserDto", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddOrUpdateUserDto(System.Nullable`1[System.Guid], StudentCorewebAPI_Project.DTOs.AddUserDto) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 11:53:51.229 +05:30 [INF] Executed DbCommand (22ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = Int64), @p6='?' (Size = 4000), @p7='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [Email], [FirstName], [IsDeleted], [LastName], [Mobile], [PasswordHash], [PasswordSalt])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-03-18 11:53:51.238 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__userDto_RoleID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleID], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleID] = @__userDto_RoleID_0
+2025-03-18 11:53:51.248 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [UserRoles] ([Id], [RoleID], [UserId])
+VALUES (@p0, @p1, @p2);
+2025-03-18 11:53:51.253 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[StudentCorewebAPI_Project.DTOs.UserResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 11:53:51.256 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project) in 344.2635ms
+2025-03-18 11:53:51.260 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 11:53:51.263 +05:30 [INF] HTTP POST /api/User/AddOrUpdate responded 200 in 367.0319 ms
+2025-03-18 11:53:51.268 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate - 200 null application/json; charset=utf-8 399.2863ms
+2025-03-18 11:54:22.550 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate - application/json 186
+2025-03-18 11:54:22.592 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 11:54:22.596 +05:30 [INF] Route matched with {action = "AddOrUpdateUserDto", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddOrUpdateUserDto(System.Nullable`1[System.Guid], StudentCorewebAPI_Project.DTOs.AddUserDto) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 11:54:22.899 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = Int64), @p6='?' (Size = 4000), @p7='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [Email], [FirstName], [IsDeleted], [LastName], [Mobile], [PasswordHash], [PasswordSalt])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-03-18 11:54:22.913 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__userDto_RoleID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleID], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleID] = @__userDto_RoleID_0
+2025-03-18 11:54:22.927 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [UserRoles] ([Id], [RoleID], [UserId])
+VALUES (@p0, @p1, @p2);
+2025-03-18 11:54:22.933 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[StudentCorewebAPI_Project.DTOs.UserResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 11:54:22.938 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project) in 338.858ms
+2025-03-18 11:54:22.945 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 11:54:22.949 +05:30 [INF] HTTP POST /api/User/AddOrUpdate responded 200 in 356.4046 ms
+2025-03-18 11:54:22.955 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate - 200 null application/json; charset=utf-8 404.2482ms
+2025-03-18 11:59:21.086 +05:30 [INF] User profile is available. Using 'C:\Users\DELL\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-18 11:59:21.675 +05:30 [INF] Now listening on: https://localhost:7047
+2025-03-18 11:59:21.679 +05:30 [INF] Now listening on: http://localhost:5118
+2025-03-18 11:59:21.932 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-18 11:59:21.935 +05:30 [INF] Hosting environment: Development
+2025-03-18 11:59:21.938 +05:30 [INF] Content root path: C:\Users\DELL\source\repos\StudentCorewebAPI_Project\StudentCorewebAPI_Project
+2025-03-18 11:59:22.685 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.html - null null
+2025-03-18 11:59:23.172 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.html - 200 null text/html;charset=utf-8 502.3277ms
+2025-03-18 11:59:23.204 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.js - null null
+2025-03-18 11:59:23.204 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_vs/browserLink - null null
+2025-03-18 11:59:23.204 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-18 11:59:23.234 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.js - 200 null application/javascript;charset=utf-8 29.8958ms
+2025-03-18 11:59:23.284 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 80.2335ms
+2025-03-18 11:59:23.337 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_vs/browserLink - 200 null text/javascript; charset=UTF-8 132.8204ms
+2025-03-18 11:59:23.772 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - null null
+2025-03-18 11:59:23.818 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 46.4096ms
+2025-03-18 11:59:51.428 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/auth/login - application/json 59
+2025-03-18 11:59:51.452 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project)'
+2025-03-18 11:59:51.505 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(StudentCorewebAPI_Project.Models.LoginRequest) on controller StudentCorewebAPI_Project.Controllers.AuthController (StudentCorewebAPI_Project).
+2025-03-18 11:59:54.922 +05:30 [INF] Executed DbCommand (124ms) [Parameters=[@__loginRequest_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__loginRequest_Email_0 AND [u].[IsDeleted] = CAST(0 AS bit)
+2025-03-18 11:59:56.197 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[RoleID], [r].[RoleName]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleID] = [r].[RoleID]
+WHERE [u].[UserId] = @__user_Id_0
+2025-03-18 11:59:56.290 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[LoginResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 11:59:56.328 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project) in 4812.7506ms
+2025-03-18 11:59:56.334 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project)'
+2025-03-18 11:59:56.343 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 4891.7963 ms
+2025-03-18 11:59:56.361 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/auth/login - 200 null application/json; charset=utf-8 4932.6718ms
+2025-03-18 12:00:26.121 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/api/User/search - null null
+2025-03-18 12:00:26.319 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.GetAllUsers (StudentCorewebAPI_Project)'
+2025-03-18 12:00:26.338 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers(PaginationParams) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 12:00:26.480 +05:30 [INF] Fetching users with Query: , SortBy: , SortOrder: false, PageNumber: 1, PageSize: 10
+2025-03-18 12:00:26.596 +05:30 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit)
+2025-03-18 12:00:26.645 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [u].[FirstName]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2025-03-18 12:00:26.661 +05:30 [INF] Users retrieved successfully.
+2025-03-18 12:00:26.664 +05:30 [INF] Executing OkObjectResult, writing value of type 'PagedResponse`1[[StudentCorewebAPI_Project.Models.User, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 12:00:26.685 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.GetAllUsers (StudentCorewebAPI_Project) in 340.4083ms
+2025-03-18 12:00:26.690 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.GetAllUsers (StudentCorewebAPI_Project)'
+2025-03-18 12:00:26.693 +05:30 [INF] HTTP GET /api/User/search responded 200 in 377.2275 ms
+2025-03-18 12:00:26.699 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/api/User/search - 200 null application/json; charset=utf-8 579.4411ms
+2025-03-18 12:06:48.843 +05:30 [INF] User profile is available. Using 'C:\Users\DELL\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-18 12:06:49.365 +05:30 [INF] Now listening on: https://localhost:7047
+2025-03-18 12:06:49.369 +05:30 [INF] Now listening on: http://localhost:5118
+2025-03-18 12:06:49.814 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-18 12:06:49.818 +05:30 [INF] Hosting environment: Development
+2025-03-18 12:06:49.819 +05:30 [INF] Content root path: C:\Users\DELL\source\repos\StudentCorewebAPI_Project\StudentCorewebAPI_Project
+2025-03-18 12:06:50.518 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.html - null null
+2025-03-18 12:06:50.992 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.html - 200 null text/html;charset=utf-8 487.4486ms
+2025-03-18 12:06:51.031 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_vs/browserLink - null null
+2025-03-18 12:06:51.031 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-18 12:06:51.031 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.js - null null
+2025-03-18 12:06:51.076 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.js - 200 null application/javascript;charset=utf-8 45.2189ms
+2025-03-18 12:06:51.083 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 52.892ms
+2025-03-18 12:06:51.134 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_vs/browserLink - 200 null text/javascript; charset=UTF-8 103.3451ms
+2025-03-18 12:06:51.568 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - null null
+2025-03-18 12:06:51.606 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 38.9578ms
+2025-03-18 12:12:57.196 +05:30 [INF] User profile is available. Using 'C:\Users\DELL\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-18 12:12:57.670 +05:30 [INF] Now listening on: https://localhost:7047
+2025-03-18 12:12:57.673 +05:30 [INF] Now listening on: http://localhost:5118
+2025-03-18 12:12:57.844 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-18 12:12:57.847 +05:30 [INF] Hosting environment: Development
+2025-03-18 12:12:57.848 +05:30 [INF] Content root path: C:\Users\DELL\source\repos\StudentCorewebAPI_Project\StudentCorewebAPI_Project
+2025-03-18 12:12:58.479 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.html - null null
+2025-03-18 12:12:58.916 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.html - 200 null text/html;charset=utf-8 450.3213ms
+2025-03-18 12:12:58.973 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-18 12:12:58.973 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.js - null null
+2025-03-18 12:12:58.973 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_vs/browserLink - null null
+2025-03-18 12:12:58.995 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.js - 200 null application/javascript;charset=utf-8 22.09ms
+2025-03-18 12:12:59.004 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 31.4645ms
+2025-03-18 12:12:59.080 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_vs/browserLink - 200 null text/javascript; charset=UTF-8 106.7916ms
+2025-03-18 12:12:59.556 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - null null
+2025-03-18 12:12:59.597 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 41.2993ms
+2025-03-18 12:13:26.939 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/auth/login - application/json 59
+2025-03-18 12:13:26.961 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project)'
+2025-03-18 12:13:27.015 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(StudentCorewebAPI_Project.Models.LoginRequest) on controller StudentCorewebAPI_Project.Controllers.AuthController (StudentCorewebAPI_Project).
+2025-03-18 12:13:30.082 +05:30 [INF] Executed DbCommand (109ms) [Parameters=[@__loginRequest_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__loginRequest_Email_0 AND [u].[IsDeleted] = CAST(0 AS bit)
+2025-03-18 12:13:31.328 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[RoleID], [r].[RoleName]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleID] = [r].[RoleID]
+WHERE [u].[UserId] = @__user_Id_0
+2025-03-18 12:13:31.420 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[LoginResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 12:13:31.457 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project) in 4433.0809ms
+2025-03-18 12:13:31.462 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project)'
+2025-03-18 12:13:31.468 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 4508.3717 ms
+2025-03-18 12:13:31.489 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/auth/login - 200 null application/json; charset=utf-8 4549.7728ms
+2025-03-18 12:18:00.620 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate - application/json 190
+2025-03-18 12:18:00.790 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 12:18:00.808 +05:30 [INF] Route matched with {action = "AddOrUpdateUserDto", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddOrUpdateUserDto(System.Nullable`1[System.Guid], StudentCorewebAPI_Project.DTOs.AddUserDto) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 12:18:01.010 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[@__userDto_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__userDto_Email_0
+2025-03-18 12:18:02.108 +05:30 [INF] Executed DbCommand (22ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = Int64), @p6='?' (Size = 4000), @p7='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [Email], [FirstName], [IsDeleted], [LastName], [Mobile], [PasswordHash], [PasswordSalt])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-03-18 12:18:02.160 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__userDto_RoleID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleID], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleID] = @__userDto_RoleID_0
+2025-03-18 12:18:02.210 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [UserRoles] ([Id], [RoleID], [UserId])
+VALUES (@p0, @p1, @p2);
+2025-03-18 12:18:02.219 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[StudentCorewebAPI_Project.DTOs.UserResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 12:18:02.242 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project) in 1428.3752ms
+2025-03-18 12:18:02.246 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 12:18:02.249 +05:30 [INF] HTTP POST /api/User/AddOrUpdate responded 200 in 1462.1646 ms
+2025-03-18 12:18:02.255 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate - 200 null application/json; charset=utf-8 1636.0678ms
+2025-03-18 12:18:37.321 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate?id=7dbd95a9-d94c-4c1f-aca8-2398e14a4463 - application/json 191
+2025-03-18 12:18:37.347 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 12:18:37.349 +05:30 [INF] Route matched with {action = "AddOrUpdateUserDto", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddOrUpdateUserDto(System.Nullable`1[System.Guid], StudentCorewebAPI_Project.DTOs.AddUserDto) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 12:18:37.436 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0 AND [u].[IsDeleted] = CAST(0 AS bit)
+2025-03-18 12:18:37.465 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [LastName] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2025-03-18 12:18:37.489 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__userDto_RoleID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleID], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleID] = @__userDto_RoleID_0
+2025-03-18 12:18:37.496 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[StudentCorewebAPI_Project.DTOs.UserResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 12:18:37.502 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project) in 148.9807ms
+2025-03-18 12:18:37.506 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 12:18:37.509 +05:30 [INF] HTTP POST /api/User/AddOrUpdate responded 200 in 162.4670 ms
+2025-03-18 12:18:37.514 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate?id=7dbd95a9-d94c-4c1f-aca8-2398e14a4463 - 200 null application/json; charset=utf-8 192.3413ms
+2025-03-18 12:20:22.924 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate - application/json 191
+2025-03-18 12:20:22.941 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 12:20:22.943 +05:30 [INF] Route matched with {action = "AddOrUpdateUserDto", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddOrUpdateUserDto(System.Nullable`1[System.Guid], StudentCorewebAPI_Project.DTOs.AddUserDto) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 12:20:22.959 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__userDto_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__userDto_Email_0
+2025-03-18 12:20:22.967 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[StudentCorewebAPI_Project.DTOs.UserResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 12:20:22.974 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project) in 26.7248ms
+2025-03-18 12:20:22.977 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 12:20:22.980 +05:30 [INF] HTTP POST /api/User/AddOrUpdate responded 400 in 39.0991 ms
+2025-03-18 12:20:22.984 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate - 400 null application/json; charset=utf-8 60.8518ms
+2025-03-18 12:20:35.586 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate?id=7dbd95a9-d94c-4c1f-aca8-2398e14a4463 - application/json 191
+2025-03-18 12:20:35.628 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 12:20:35.630 +05:30 [INF] Route matched with {action = "AddOrUpdateUserDto", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddOrUpdateUserDto(System.Nullable`1[System.Guid], StudentCorewebAPI_Project.DTOs.AddUserDto) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 12:20:35.650 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0 AND [u].[IsDeleted] = CAST(0 AS bit)
+2025-03-18 12:20:35.660 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__userDto_RoleID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleID], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleID] = @__userDto_RoleID_0
+2025-03-18 12:20:35.664 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[StudentCorewebAPI_Project.DTOs.UserResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 12:20:35.668 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project) in 31.7926ms
+2025-03-18 12:20:35.671 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 12:20:35.672 +05:30 [INF] HTTP POST /api/User/AddOrUpdate responded 200 in 44.0122 ms
+2025-03-18 12:20:35.677 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate?id=7dbd95a9-d94c-4c1f-aca8-2398e14a4463 - 200 null application/json; charset=utf-8 90.9793ms
+2025-03-18 12:44:14.131 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate - application/json 191
+2025-03-18 12:44:14.171 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 12:44:14.178 +05:30 [INF] Route matched with {action = "AddOrUpdateUserDto", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddOrUpdateUserDto(System.Nullable`1[System.Guid], StudentCorewebAPI_Project.DTOs.AddUserDto) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 12:44:14.337 +05:30 [INF] Executed DbCommand (50ms) [Parameters=[@__userDto_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__userDto_Email_0
+2025-03-18 12:44:14.346 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[StudentCorewebAPI_Project.DTOs.UserResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 12:44:14.350 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project) in 169.6552ms
+2025-03-18 12:44:14.351 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 12:44:14.353 +05:30 [INF] HTTP POST /api/User/AddOrUpdate responded 400 in 183.0102 ms
+2025-03-18 12:44:14.360 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate - 400 null application/json; charset=utf-8 228.4503ms
+2025-03-18 13:04:48.981 +05:30 [INF] User profile is available. Using 'C:\Users\DELL\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-18 13:04:49.339 +05:30 [INF] Now listening on: https://localhost:7047
+2025-03-18 13:04:49.340 +05:30 [INF] Now listening on: http://localhost:5118
+2025-03-18 13:04:49.436 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-18 13:04:49.437 +05:30 [INF] Hosting environment: Development
+2025-03-18 13:04:49.437 +05:30 [INF] Content root path: C:\Users\DELL\source\repos\StudentCorewebAPI_Project\StudentCorewebAPI_Project
+2025-03-18 13:04:50.131 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.html - null null
+2025-03-18 13:04:50.445 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.html - 200 null text/html;charset=utf-8 322.3157ms
+2025-03-18 13:04:50.464 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.js - null null
+2025-03-18 13:04:50.464 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_vs/browserLink - null null
+2025-03-18 13:04:50.464 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-18 13:04:50.483 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.js - 200 null application/javascript;charset=utf-8 19.6048ms
+2025-03-18 13:04:50.524 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 60.6754ms
+2025-03-18 13:04:50.551 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_vs/browserLink - 200 null text/javascript; charset=UTF-8 87.5615ms
+2025-03-18 13:04:50.792 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - null null
+2025-03-18 13:04:50.813 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 21.1076ms
+2025-03-18 13:04:50.820 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/favicon-32x32.png - null null
+2025-03-18 13:04:50.830 +05:30 [INF] The file /favicon-32x32.png was not modified
+2025-03-18 13:04:50.832 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/favicon-32x32.png - 304 null image/png 12.511ms
+2025-03-18 13:05:29.984 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/auth/login - application/json 60
+2025-03-18 13:05:29.993 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project)'
+2025-03-18 13:05:30.021 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(StudentCorewebAPI_Project.Models.LoginRequest) on controller StudentCorewebAPI_Project.Controllers.AuthController (StudentCorewebAPI_Project).
+2025-03-18 13:05:31.479 +05:30 [INF] Executed DbCommand (110ms) [Parameters=[@__loginRequest_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__loginRequest_Email_0 AND [u].[IsDeleted] = CAST(0 AS bit)
+2025-03-18 13:05:32.021 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[LoginResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 13:05:32.037 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project) in 2011.4437ms
+2025-03-18 13:05:32.039 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project)'
+2025-03-18 13:05:32.041 +05:30 [INF] HTTP POST /api/auth/login responded 401 in 2048.8572 ms
+2025-03-18 13:05:32.050 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/auth/login - 401 null application/json; charset=utf-8 2065.8167ms
+2025-03-18 13:06:00.445 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/auth/login - application/json 59
+2025-03-18 13:06:00.462 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project)'
+2025-03-18 13:06:00.463 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(StudentCorewebAPI_Project.Models.LoginRequest) on controller StudentCorewebAPI_Project.Controllers.AuthController (StudentCorewebAPI_Project).
+2025-03-18 13:06:00.523 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__loginRequest_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__loginRequest_Email_0 AND [u].[IsDeleted] = CAST(0 AS bit)
+2025-03-18 13:06:00.874 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[RoleID], [r].[RoleName]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleID] = [r].[RoleID]
+WHERE [u].[UserId] = @__user_Id_0
+2025-03-18 13:06:00.926 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[LoginResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 13:06:00.932 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project) in 466.7969ms
+2025-03-18 13:06:00.934 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project)'
+2025-03-18 13:06:00.935 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 473.0094 ms
+2025-03-18 13:06:00.937 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/auth/login - 200 null application/json; charset=utf-8 493.7195ms
+2025-03-18 13:08:45.733 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate - application/json 185
+2025-03-18 13:08:45.823 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 13:08:45.831 +05:30 [INF] Route matched with {action = "AddOrUpdateUserDto", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddOrUpdateUserDto(System.Nullable`1[System.Guid], StudentCorewebAPI_Project.DTOs.AddUserDto) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 13:08:45.881 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__userDto_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__userDto_Email_0
+2025-03-18 13:08:46.127 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = Int64), @p6='?' (Size = 4000), @p7='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [Email], [FirstName], [IsDeleted], [LastName], [Mobile], [PasswordHash], [PasswordSalt])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-03-18 13:08:46.151 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__userDto_RoleID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleID], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleID] = @__userDto_RoleID_0
+2025-03-18 13:08:46.177 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [UserRoles] ([Id], [RoleID], [UserId])
+VALUES (@p0, @p1, @p2);
+2025-03-18 13:08:46.191 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__userDto_RoleID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleID] = @__userDto_RoleID_0
+2025-03-18 13:08:46.195 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[StudentCorewebAPI_Project.DTOs.UserResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 13:08:46.203 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project) in 370.5835ms
+2025-03-18 13:08:46.205 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 13:08:46.205 +05:30 [INF] HTTP POST /api/User/AddOrUpdate responded 200 in 383.9450 ms
+2025-03-18 13:08:46.207 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate - 200 null application/json; charset=utf-8 474.419ms
+2025-03-18 13:09:21.595 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate?id=ad6db701-74aa-411e-9740-2e329eaa7939 - application/json 186
+2025-03-18 13:09:21.616 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 13:09:21.617 +05:30 [INF] Route matched with {action = "AddOrUpdateUserDto", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddOrUpdateUserDto(System.Nullable`1[System.Guid], StudentCorewebAPI_Project.DTOs.AddUserDto) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 13:09:21.645 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0 AND [u].[IsDeleted] = CAST(0 AS bit)
+2025-03-18 13:09:21.674 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [LastName] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2025-03-18 13:09:21.684 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__userDto_RoleID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleID] = @__userDto_RoleID_0
+2025-03-18 13:09:21.686 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[StudentCorewebAPI_Project.DTOs.UserResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 13:09:21.688 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project) in 69.2689ms
+2025-03-18 13:09:21.689 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 13:09:21.691 +05:30 [INF] HTTP POST /api/User/AddOrUpdate responded 200 in 75.0054 ms
+2025-03-18 13:09:21.693 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate?id=ad6db701-74aa-411e-9740-2e329eaa7939 - 200 null application/json; charset=utf-8 97.8306ms
+2025-03-18 13:11:08.505 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate - application/json 186
+2025-03-18 13:11:08.518 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 13:11:08.519 +05:30 [INF] Route matched with {action = "AddOrUpdateUserDto", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddOrUpdateUserDto(System.Nullable`1[System.Guid], StudentCorewebAPI_Project.DTOs.AddUserDto) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 13:11:08.537 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__userDto_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__userDto_Email_0
+2025-03-18 13:11:08.540 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[StudentCorewebAPI_Project.DTOs.UserResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 13:11:08.542 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project) in 20.2308ms
+2025-03-18 13:11:08.544 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 13:11:08.545 +05:30 [INF] HTTP POST /api/User/AddOrUpdate responded 400 in 27.9424 ms
+2025-03-18 13:11:08.547 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate - 400 null application/json; charset=utf-8 43.2468ms
+2025-03-18 13:11:14.010 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate?id=ad6db701-74aa-411e-9740-2e329eaa7939 - application/json 186
+2025-03-18 13:11:14.013 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 13:11:14.014 +05:30 [INF] Route matched with {action = "AddOrUpdateUserDto", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddOrUpdateUserDto(System.Nullable`1[System.Guid], StudentCorewebAPI_Project.DTOs.AddUserDto) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 13:11:14.033 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0 AND [u].[IsDeleted] = CAST(0 AS bit)
+2025-03-18 13:11:14.037 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__userDto_RoleID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleID] = @__userDto_RoleID_0
+2025-03-18 13:11:14.039 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[StudentCorewebAPI_Project.DTOs.UserResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 13:11:14.041 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project) in 24.5459ms
+2025-03-18 13:11:14.042 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 13:11:14.043 +05:30 [INF] HTTP POST /api/User/AddOrUpdate responded 200 in 30.3689 ms
+2025-03-18 13:11:14.045 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate?id=ad6db701-74aa-411e-9740-2e329eaa7939 - 200 null application/json; charset=utf-8 35.0486ms
+2025-03-18 14:28:28.690 +05:30 [INF] User profile is available. Using 'C:\Users\DELL\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-18 14:28:29.512 +05:30 [INF] Now listening on: https://localhost:7047
+2025-03-18 14:28:29.517 +05:30 [INF] Now listening on: http://localhost:5118
+2025-03-18 14:28:29.815 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-18 14:28:29.819 +05:30 [INF] Hosting environment: Development
+2025-03-18 14:28:29.821 +05:30 [INF] Content root path: C:\Users\DELL\source\repos\StudentCorewebAPI_Project\StudentCorewebAPI_Project
+2025-03-18 14:28:30.760 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.html - null null
+2025-03-18 14:28:31.482 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.html - 200 null text/html;charset=utf-8 739.5186ms
+2025-03-18 14:28:31.533 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.js - null null
+2025-03-18 14:28:31.533 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-18 14:28:31.564 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_vs/browserLink - null null
+2025-03-18 14:28:31.580 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.js - 200 null application/javascript;charset=utf-8 48.0641ms
+2025-03-18 14:28:31.626 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 89.2084ms
+2025-03-18 14:28:31.694 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_vs/browserLink - 200 null text/javascript; charset=UTF-8 130.9796ms
+2025-03-18 14:28:32.099 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - null null
+2025-03-18 14:28:32.147 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 48.9929ms
+2025-03-18 14:29:34.166 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/auth/login - application/json 59
+2025-03-18 14:29:34.204 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project)'
+2025-03-18 14:29:34.265 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(StudentCorewebAPI_Project.Models.LoginRequest) on controller StudentCorewebAPI_Project.Controllers.AuthController (StudentCorewebAPI_Project).
+2025-03-18 14:29:37.900 +05:30 [INF] Executed DbCommand (233ms) [Parameters=[@__loginRequest_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__loginRequest_Email_0 AND [u].[IsDeleted] = CAST(0 AS bit)
+2025-03-18 14:29:39.202 +05:30 [INF] Executed DbCommand (34ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[RoleID], [r].[RoleName]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleID] = [r].[RoleID]
+WHERE [u].[UserId] = @__user_Id_0
+2025-03-18 14:29:39.306 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[LoginResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 14:29:39.353 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project) in 5077.4356ms
+2025-03-18 14:29:39.357 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project)'
+2025-03-18 14:29:39.363 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 5163.0624 ms
+2025-03-18 14:29:39.384 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/auth/login - 200 null application/json; charset=utf-8 5217.4856ms
+2025-03-18 14:32:22.689 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate - application/json 187
+2025-03-18 14:32:22.838 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 14:32:22.851 +05:30 [INF] Route matched with {action = "AddOrUpdateUserDto", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddOrUpdateUserDto(System.Nullable`1[System.Guid], StudentCorewebAPI_Project.DTOs.AddUserDto) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 14:32:23.020 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__userDto_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__userDto_Email_0
+2025-03-18 14:32:23.575 +05:30 [INF] Executed DbCommand (29ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = Int64), @p6='?' (Size = 4000), @p7='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [Email], [FirstName], [IsDeleted], [LastName], [Mobile], [PasswordHash], [PasswordSalt])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-03-18 14:32:23.624 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__userDto_RoleID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleID], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleID] = @__userDto_RoleID_0
+2025-03-18 14:32:23.673 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [UserRoles] ([Id], [RoleID], [UserId])
+VALUES (@p0, @p1, @p2);
+2025-03-18 14:32:23.695 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__userDto_RoleID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleID] = @__userDto_RoleID_0
+2025-03-18 14:32:23.703 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[StudentCorewebAPI_Project.DTOs.UserResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 14:32:23.722 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project) in 868.4464ms
+2025-03-18 14:32:23.726 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 14:32:23.728 +05:30 [INF] HTTP POST /api/User/AddOrUpdate responded 200 in 891.9616 ms
+2025-03-18 14:32:23.733 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate - 200 null application/json; charset=utf-8 1044.6419ms
+2025-03-18 14:32:32.020 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate - application/json 187
+2025-03-18 14:32:32.036 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 14:32:32.038 +05:30 [INF] Route matched with {action = "AddOrUpdateUserDto", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddOrUpdateUserDto(System.Nullable`1[System.Guid], StudentCorewebAPI_Project.DTOs.AddUserDto) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 14:32:32.113 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[@__userDto_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__userDto_Email_0
+2025-03-18 14:32:32.121 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[StudentCorewebAPI_Project.DTOs.UserResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 14:32:32.126 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project) in 81.4987ms
+2025-03-18 14:32:32.129 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 14:32:32.131 +05:30 [INF] HTTP POST /api/User/AddOrUpdate responded 400 in 95.5599 ms
+2025-03-18 14:32:32.135 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate - 400 null application/json; charset=utf-8 115.2574ms
+2025-03-18 14:35:49.262 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate?id=86E6D2A6-6F5D-4F77-842F-2C65FE307D80 - application/json 187
+2025-03-18 14:35:49.293 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 14:35:49.296 +05:30 [INF] Route matched with {action = "AddOrUpdateUserDto", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddOrUpdateUserDto(System.Nullable`1[System.Guid], StudentCorewebAPI_Project.DTOs.AddUserDto) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 14:35:49.360 +05:30 [INF] Executed DbCommand (24ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0 AND [u].[IsDeleted] = CAST(0 AS bit)
+2025-03-18 14:35:49.373 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__userDto_RoleID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleID] = @__userDto_RoleID_0
+2025-03-18 14:35:49.378 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[StudentCorewebAPI_Project.DTOs.UserResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 14:35:49.382 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project) in 81.426ms
+2025-03-18 14:35:49.385 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 14:35:49.388 +05:30 [INF] HTTP POST /api/User/AddOrUpdate responded 200 in 95.2927 ms
+2025-03-18 14:35:49.391 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate?id=86E6D2A6-6F5D-4F77-842F-2C65FE307D80 - 200 null application/json; charset=utf-8 129.9912ms
+2025-03-18 14:36:33.997 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate?id=86E6D2A6-6F5D-4F77-842F-2C65FE307D80 - application/json 188
+2025-03-18 14:36:34.023 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 14:36:34.028 +05:30 [INF] Route matched with {action = "AddOrUpdateUserDto", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddOrUpdateUserDto(System.Nullable`1[System.Guid], StudentCorewebAPI_Project.DTOs.AddUserDto) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 14:36:34.045 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0 AND [u].[IsDeleted] = CAST(0 AS bit)
+2025-03-18 14:36:34.056 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__userDto_RoleID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleID] = @__userDto_RoleID_0
+2025-03-18 14:36:34.061 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[StudentCorewebAPI_Project.DTOs.UserResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 14:36:34.064 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project) in 32.6617ms
+2025-03-18 14:36:34.068 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 14:36:34.071 +05:30 [INF] HTTP POST /api/User/AddOrUpdate responded 200 in 47.1624 ms
+2025-03-18 14:36:34.074 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate?id=86E6D2A6-6F5D-4F77-842F-2C65FE307D80 - 200 null application/json; charset=utf-8 77.2202ms
+2025-03-18 15:32:28.476 +05:30 [INF] User profile is available. Using 'C:\Users\DELL\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-18 15:32:29.177 +05:30 [INF] Now listening on: https://localhost:7047
+2025-03-18 15:32:29.180 +05:30 [INF] Now listening on: http://localhost:5118
+2025-03-18 15:32:29.663 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-18 15:32:29.666 +05:30 [INF] Hosting environment: Development
+2025-03-18 15:32:29.668 +05:30 [INF] Content root path: C:\Users\DELL\source\repos\StudentCorewebAPI_Project\StudentCorewebAPI_Project
+2025-03-18 15:32:30.471 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.html - null null
+2025-03-18 15:32:31.041 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.html - 200 null text/html;charset=utf-8 588.5038ms
+2025-03-18 15:32:31.090 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_vs/browserLink - null null
+2025-03-18 15:32:31.090 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-18 15:32:31.090 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.js - null null
+2025-03-18 15:32:31.139 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.js - 200 null application/javascript;charset=utf-8 49.739ms
+2025-03-18 15:32:31.155 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 65.1769ms
+2025-03-18 15:32:31.203 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_vs/browserLink - 200 null text/javascript; charset=UTF-8 113.7948ms
+2025-03-18 15:32:31.669 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - null null
+2025-03-18 15:32:31.719 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 50.2496ms
+2025-03-18 15:33:19.365 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/auth/register - application/json 64
+2025-03-18 15:33:19.387 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.AuthController.Register (StudentCorewebAPI_Project)'
+2025-03-18 15:33:19.452 +05:30 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(StudentCorewebAPI_Project.Models.RegisterRequest) on controller StudentCorewebAPI_Project.Controllers.AuthController (StudentCorewebAPI_Project).
+2025-03-18 15:33:22.759 +05:30 [INF] Executed DbCommand (109ms) [Parameters=[@__registerRequest_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @__registerRequest_Email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-03-18 15:33:23.834 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__defaultRole_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleID]
+FROM [Roles] AS [r]
+WHERE [r].[RoleName] = @__defaultRole_0
+2025-03-18 15:33:24.211 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = Int64), @p6='?' (Size = 4000), @p7='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [Email], [FirstName], [IsDeleted], [LastName], [Mobile], [PasswordHash], [PasswordSalt])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-03-18 15:33:24.273 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [UserRoles] ([Id], [RoleID], [UserId])
+VALUES (@p0, @p1, @p2);
+2025-03-18 15:33:24.299 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-18 15:33:24.322 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.AuthController.Register (StudentCorewebAPI_Project) in 4858.0278ms
+2025-03-18 15:33:24.327 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.AuthController.Register (StudentCorewebAPI_Project)'
+2025-03-18 15:33:24.334 +05:30 [INF] HTTP POST /api/auth/register responded 200 in 4950.2231 ms
+2025-03-18 15:33:24.357 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/auth/register - 200 null application/json; charset=utf-8 4991.8907ms
+2025-03-18 15:33:37.575 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/auth/login - application/json 47
+2025-03-18 15:33:37.591 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project)'
+2025-03-18 15:33:37.605 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(StudentCorewebAPI_Project.Models.LoginRequest) on controller StudentCorewebAPI_Project.Controllers.AuthController (StudentCorewebAPI_Project).
+2025-03-18 15:33:37.747 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-03-18 15:33:37.789 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project) in 177.6101ms
+2025-03-18 15:33:37.792 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project)'
+2025-03-18 15:33:37.795 +05:30 [INF] HTTP POST /api/auth/login responded 400 in 204.5529 ms
+2025-03-18 15:33:37.800 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/auth/login - 400 null application/problem+json; charset=utf-8 232.2512ms
+2025-03-18 15:34:20.520 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/auth/login - application/json 65
+2025-03-18 15:34:20.540 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project)'
+2025-03-18 15:34:20.542 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(StudentCorewebAPI_Project.Models.LoginRequest) on controller StudentCorewebAPI_Project.Controllers.AuthController (StudentCorewebAPI_Project).
+2025-03-18 15:34:20.681 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[@__loginRequest_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__loginRequest_Email_0 AND [u].[IsDeleted] = CAST(0 AS bit)
+2025-03-18 15:34:20.691 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[LoginResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 15:34:20.714 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project) in 168.2915ms
+2025-03-18 15:34:20.718 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project)'
+2025-03-18 15:34:20.722 +05:30 [INF] HTTP POST /api/auth/login responded 401 in 181.7599 ms
+2025-03-18 15:34:20.725 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/auth/login - 401 null application/json; charset=utf-8 205.9367ms
+2025-03-18 15:34:31.084 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/auth/login - application/json 64
+2025-03-18 15:34:31.102 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project)'
+2025-03-18 15:34:31.104 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(StudentCorewebAPI_Project.Models.LoginRequest) on controller StudentCorewebAPI_Project.Controllers.AuthController (StudentCorewebAPI_Project).
+2025-03-18 15:34:31.137 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[@__loginRequest_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__loginRequest_Email_0 AND [u].[IsDeleted] = CAST(0 AS bit)
+2025-03-18 15:34:31.144 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[LoginResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 15:34:31.148 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project) in 40.8668ms
+2025-03-18 15:34:31.154 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project)'
+2025-03-18 15:34:31.158 +05:30 [INF] HTTP POST /api/auth/login responded 401 in 56.4212 ms
+2025-03-18 15:34:31.165 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/auth/login - 401 null application/json; charset=utf-8 82.9886ms
+2025-03-18 15:35:10.213 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/auth/login - application/json 64
+2025-03-18 15:35:10.239 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project)'
+2025-03-18 15:35:10.243 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(StudentCorewebAPI_Project.Models.LoginRequest) on controller StudentCorewebAPI_Project.Controllers.AuthController (StudentCorewebAPI_Project).
+2025-03-18 15:35:10.264 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__loginRequest_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__loginRequest_Email_0 AND [u].[IsDeleted] = CAST(0 AS bit)
+2025-03-18 15:35:10.640 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[RoleID], [r].[RoleName]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleID] = [r].[RoleID]
+WHERE [u].[UserId] = @__user_Id_0
+2025-03-18 15:35:10.747 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[LoginResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 15:35:10.758 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project) in 510.7065ms
+2025-03-18 15:35:10.761 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project)'
+2025-03-18 15:35:10.762 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 523.2437 ms
+2025-03-18 15:35:10.767 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/auth/login - 200 null application/json; charset=utf-8 555.2139ms
+2025-03-18 15:36:21.216 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/api/User/search - null null
+2025-03-18 15:36:21.374 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.GetAllUsers (StudentCorewebAPI_Project)'
+2025-03-18 15:36:21.390 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers(PaginationParams) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 15:36:21.414 +05:30 [INF] Fetching users with Query: , SortBy: , SortOrder: false, PageNumber: 1, PageSize: 10
+2025-03-18 15:36:21.500 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit)
+2025-03-18 15:36:21.573 +05:30 [INF] Executed DbCommand (37ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [u].[FirstName]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2025-03-18 15:36:21.586 +05:30 [INF] Users retrieved successfully.
+2025-03-18 15:36:21.589 +05:30 [INF] Executing OkObjectResult, writing value of type 'PagedResponse`1[[StudentCorewebAPI_Project.Models.User, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 15:36:21.605 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.GetAllUsers (StudentCorewebAPI_Project) in 210.3454ms
+2025-03-18 15:36:21.609 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.GetAllUsers (StudentCorewebAPI_Project)'
+2025-03-18 15:36:21.612 +05:30 [INF] HTTP GET /api/User/search responded 200 in 239.9973 ms
+2025-03-18 15:36:21.618 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/api/User/search - 200 null application/json; charset=utf-8 402.8501ms
+2025-03-18 15:39:39.379 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/User - application/json 192
+2025-03-18 15:39:39.408 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2025-03-18 15:39:39.419 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2025-03-18 15:39:39.423 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/User - 403 null application/json 43.8656ms
+2025-03-18 15:41:12.765 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/auth/login - application/json 59
+2025-03-18 15:41:12.790 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project)'
+2025-03-18 15:41:12.793 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(StudentCorewebAPI_Project.Models.LoginRequest) on controller StudentCorewebAPI_Project.Controllers.AuthController (StudentCorewebAPI_Project).
+2025-03-18 15:41:12.852 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[@__loginRequest_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__loginRequest_Email_0 AND [u].[IsDeleted] = CAST(0 AS bit)
+2025-03-18 15:41:13.166 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[RoleID], [r].[RoleName]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleID] = [r].[RoleID]
+WHERE [u].[UserId] = @__user_Id_0
+2025-03-18 15:41:13.174 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[LoginResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 15:41:13.177 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project) in 379.9261ms
+2025-03-18 15:41:13.179 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project)'
+2025-03-18 15:41:13.181 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 391.2609 ms
+2025-03-18 15:41:13.185 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/auth/login - 200 null application/json; charset=utf-8 421.1484ms
+2025-03-18 15:41:39.004 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/User - application/json 192
+2025-03-18 15:41:39.039 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddUser (StudentCorewebAPI_Project)'
+2025-03-18 15:41:39.050 +05:30 [INF] Route matched with {action = "AddUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddUser(StudentCorewebAPI_Project.DTOs.AddUserDto) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 15:41:39.409 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = Int64), @p6='?' (Size = 4000), @p7='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [Email], [FirstName], [IsDeleted], [LastName], [Mobile], [PasswordHash], [PasswordSalt])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-03-18 15:41:39.474 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__userDto_RoleID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleID], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleID] = @__userDto_RoleID_0
+2025-03-18 15:41:39.499 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [UserRoles] ([Id], [RoleID], [UserId])
+VALUES (@p0, @p1, @p2);
+2025-03-18 15:41:39.507 +05:30 [INF] User added successfully with ID: "0c98d1c4-9832-44ec-9d33-bf7f368b466d"
+2025-03-18 15:41:39.512 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[StudentCorewebAPI_Project.DTOs.UserResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 15:41:39.569 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.AddUser (StudentCorewebAPI_Project) in 514.0635ms
+2025-03-18 15:41:39.573 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddUser (StudentCorewebAPI_Project)'
+2025-03-18 15:41:39.575 +05:30 [INF] HTTP POST /api/User responded 201 in 535.9054 ms
+2025-03-18 15:41:39.580 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/User - 201 null application/json; charset=utf-8 576.7205ms
+2025-03-18 15:42:06.622 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate - application/json 192
+2025-03-18 15:42:06.630 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 15:42:06.639 +05:30 [INF] Route matched with {action = "AddOrUpdateUserDto", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddOrUpdateUserDto(System.Nullable`1[System.Guid], StudentCorewebAPI_Project.DTOs.AddUserDto) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 15:42:06.677 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[@__userDto_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__userDto_Email_0
+2025-03-18 15:42:06.682 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[StudentCorewebAPI_Project.DTOs.UserResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 15:42:06.685 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project) in 42.2108ms
+2025-03-18 15:42:06.688 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 15:42:06.690 +05:30 [INF] HTTP POST /api/User/AddOrUpdate responded 400 in 60.7401 ms
+2025-03-18 15:42:06.693 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate - 400 null application/json; charset=utf-8 72.6699ms
+2025-03-18 15:43:03.935 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate?id=0c98d1c4-9832-44ec-9d33-bf7f368b466d - application/json 193
+2025-03-18 15:43:03.953 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 15:43:03.955 +05:30 [INF] Route matched with {action = "AddOrUpdateUserDto", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddOrUpdateUserDto(System.Nullable`1[System.Guid], StudentCorewebAPI_Project.DTOs.AddUserDto) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 15:43:04.006 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0 AND [u].[IsDeleted] = CAST(0 AS bit)
+2025-03-18 15:43:04.056 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [FirstName] = @p0, [LastName] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;
+2025-03-18 15:43:04.085 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__userDto_RoleID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleID] = @__userDto_RoleID_0
+2025-03-18 15:43:04.091 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[StudentCorewebAPI_Project.DTOs.UserResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 15:43:04.093 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project) in 133.6364ms
+2025-03-18 15:43:04.099 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 15:43:04.101 +05:30 [INF] HTTP POST /api/User/AddOrUpdate responded 200 in 148.3435 ms
+2025-03-18 15:43:04.104 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate?id=0c98d1c4-9832-44ec-9d33-bf7f368b466d - 200 null application/json; charset=utf-8 169.7681ms
+2025-03-18 15:43:16.893 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate - application/json 193
+2025-03-18 15:43:16.910 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 15:43:16.917 +05:30 [INF] Route matched with {action = "AddOrUpdateUserDto", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddOrUpdateUserDto(System.Nullable`1[System.Guid], StudentCorewebAPI_Project.DTOs.AddUserDto) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 15:43:16.962 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[@__userDto_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__userDto_Email_0
+2025-03-18 15:43:16.969 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[StudentCorewebAPI_Project.DTOs.UserResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 15:43:16.972 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project) in 43.6841ms
+2025-03-18 15:43:16.976 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 15:43:16.978 +05:30 [INF] HTTP POST /api/User/AddOrUpdate responded 400 in 68.2412 ms
+2025-03-18 15:43:16.984 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate - 400 null application/json; charset=utf-8 90.27ms
+2025-03-18 15:43:31.327 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/api/User/search - null null
+2025-03-18 15:43:31.333 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.GetAllUsers (StudentCorewebAPI_Project)'
+2025-03-18 15:43:31.368 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers(PaginationParams) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 15:43:31.386 +05:30 [INF] Fetching users with Query: , SortBy: , SortOrder: false, PageNumber: 1, PageSize: 10
+2025-03-18 15:43:31.402 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit)
+2025-03-18 15:43:31.420 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [u].[FirstName]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2025-03-18 15:43:31.426 +05:30 [INF] Users retrieved successfully.
+2025-03-18 15:43:31.428 +05:30 [INF] Executing OkObjectResult, writing value of type 'PagedResponse`1[[StudentCorewebAPI_Project.Models.User, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 15:43:31.430 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.GetAllUsers (StudentCorewebAPI_Project) in 57.1109ms
+2025-03-18 15:43:31.435 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.GetAllUsers (StudentCorewebAPI_Project)'
+2025-03-18 15:43:31.437 +05:30 [INF] HTTP GET /api/User/search responded 200 in 104.1628 ms
+2025-03-18 15:43:31.442 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/api/User/search - 200 null application/json; charset=utf-8 115.8337ms
+2025-03-18 15:44:57.120 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7047/api/User - application/json 156
+2025-03-18 15:44:57.145 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.UpdateUser (StudentCorewebAPI_Project)'
+2025-03-18 15:44:57.158 +05:30 [INF] Route matched with {action = "UpdateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] UpdateUser(StudentCorewebAPI_Project.DTOs.UpdateUserDto) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 15:44:57.176 +05:30 [INF] Updating user with ID: "9eacc1af-822c-4394-36f0-08dd66041ece"
+2025-03-18 15:44:57.217 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0 AND [u].[IsDeleted] = CAST(0 AS bit)
+2025-03-18 15:44:57.234 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@p4='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Email] = @p0, [FirstName] = @p1, [LastName] = @p2, [Mobile] = @p3
+OUTPUT 1
+WHERE [Id] = @p4;
+2025-03-18 15:44:57.241 +05:30 [INF] User updated successfully.
+2025-03-18 15:44:57.244 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[StudentCorewebAPI_Project.Models.User, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 15:44:57.249 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.UpdateUser (StudentCorewebAPI_Project) in 87.5241ms
+2025-03-18 15:44:57.253 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.UpdateUser (StudentCorewebAPI_Project)'
+2025-03-18 15:44:57.255 +05:30 [INF] HTTP PUT /api/User responded 200 in 109.8969 ms
+2025-03-18 15:44:57.259 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7047/api/User - 200 null application/json; charset=utf-8 139.0379ms
+2025-03-18 15:45:39.482 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/api/User/9eacc1af-822c-4394-36f0-08dd66041ece - null null
+2025-03-18 15:45:39.510 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.GetUser (StudentCorewebAPI_Project)'
+2025-03-18 15:45:39.518 +05:30 [INF] Route matched with {action = "GetUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[StudentCorewebAPI_Project.DTOs.UserDto]]] GetUser(System.Guid) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 15:45:39.528 +05:30 [INF] Fetching user details for ID: "9eacc1af-822c-4394-36f0-08dd66041ece"
+2025-03-18 15:45:39.552 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0 AND [u].[IsDeleted] = CAST(0 AS bit)
+2025-03-18 15:45:39.560 +05:30 [INF] User retrieved successfully.
+2025-03-18 15:45:39.566 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[StudentCorewebAPI_Project.Models.User, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 15:45:39.570 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.GetUser (StudentCorewebAPI_Project) in 47.7922ms
+2025-03-18 15:45:39.573 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.GetUser (StudentCorewebAPI_Project)'
+2025-03-18 15:45:39.576 +05:30 [INF] HTTP GET /api/User/9eacc1af-822c-4394-36f0-08dd66041ece responded 200 in 65.9053 ms
+2025-03-18 15:45:39.580 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/api/User/9eacc1af-822c-4394-36f0-08dd66041ece - 200 null application/json; charset=utf-8 98.9576ms
+2025-03-18 15:53:50.377 +05:30 [INF] Request starting HTTP/2 DELETE https://localhost:7047/api/User/9eacc1af-822c-4394-36f0-08dd66041ece - null null
+2025-03-18 15:53:50.397 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.DeleteUser (StudentCorewebAPI_Project)'
+2025-03-18 15:53:50.406 +05:30 [INF] Route matched with {action = "DeleteUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteUser(System.Guid) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 15:53:50.414 +05:30 [INF] Deleting user with ID: "9eacc1af-822c-4394-36f0-08dd66041ece"
+2025-03-18 15:53:50.470 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0 AND [u].[IsDeleted] = CAST(0 AS bit)
+2025-03-18 15:53:50.489 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [IsDeleted] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2025-03-18 15:53:50.494 +05:30 [INF] User deleted successfully.
+2025-03-18 15:53:50.497 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-18 15:53:50.501 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.DeleteUser (StudentCorewebAPI_Project) in 90.6688ms
+2025-03-18 15:53:50.504 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.DeleteUser (StudentCorewebAPI_Project)'
+2025-03-18 15:53:50.506 +05:30 [INF] HTTP DELETE /api/User/9eacc1af-822c-4394-36f0-08dd66041ece responded 200 in 109.1859 ms
+2025-03-18 15:53:50.510 +05:30 [INF] Request finished HTTP/2 DELETE https://localhost:7047/api/User/9eacc1af-822c-4394-36f0-08dd66041ece - 200 null application/json; charset=utf-8 135.7502ms
+2025-03-18 15:55:42.579 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/api/User/search - null null
+2025-03-18 15:55:42.609 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.GetAllUsers (StudentCorewebAPI_Project)'
+2025-03-18 15:55:42.612 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers(PaginationParams) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 15:55:42.619 +05:30 [INF] Fetching users with Query: , SortBy: , SortOrder: false, PageNumber: 1, PageSize: 10
+2025-03-18 15:55:42.646 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit)
+2025-03-18 15:55:42.664 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [u].[FirstName]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2025-03-18 15:55:42.668 +05:30 [INF] Users retrieved successfully.
+2025-03-18 15:55:42.670 +05:30 [INF] Executing OkObjectResult, writing value of type 'PagedResponse`1[[StudentCorewebAPI_Project.Models.User, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 15:55:42.674 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.GetAllUsers (StudentCorewebAPI_Project) in 57.6677ms
+2025-03-18 15:55:42.676 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.GetAllUsers (StudentCorewebAPI_Project)'
+2025-03-18 15:55:42.679 +05:30 [INF] HTTP GET /api/User/search responded 200 in 69.5440 ms
+2025-03-18 15:55:42.682 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/api/User/search - 200 null application/json; charset=utf-8 103.8811ms
+2025-03-18 16:07:56.118 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.html - null null
+2025-03-18 16:07:56.296 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.html - 200 null text/html;charset=utf-8 181.8886ms
+2025-03-18 16:07:56.633 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.js - null null
+2025-03-18 16:07:56.634 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_vs/browserLink - null null
+2025-03-18 16:07:56.634 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-18 16:07:56.644 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.js - 200 null application/javascript;charset=utf-8 11.1502ms
+2025-03-18 16:07:56.679 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 46.0212ms
+2025-03-18 16:07:56.699 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_vs/browserLink - 200 null text/javascript; charset=UTF-8 65.431ms
+2025-03-18 16:07:57.605 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - null null
+2025-03-18 16:07:57.724 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 119.5779ms
+2025-03-18 16:29:09.324 +05:30 [INF] User profile is available. Using 'C:\Users\DELL\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-18 16:29:10.039 +05:30 [INF] Now listening on: https://localhost:7047
+2025-03-18 16:29:10.042 +05:30 [INF] Now listening on: http://localhost:5118
+2025-03-18 16:29:10.311 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-18 16:29:10.534 +05:30 [INF] Hosting environment: Development
+2025-03-18 16:29:10.536 +05:30 [INF] Content root path: C:\Users\DELL\source\repos\StudentCorewebAPI_Project\StudentCorewebAPI_Project
+2025-03-18 16:29:11.081 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.html - null null
+2025-03-18 16:29:11.709 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.html - 200 null text/html;charset=utf-8 644.4749ms
+2025-03-18 16:29:11.758 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.js - null null
+2025-03-18 16:29:11.758 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-18 16:29:11.794 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.js - 200 null application/javascript;charset=utf-8 36.1316ms
+2025-03-18 16:29:11.817 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_vs/browserLink - null null
+2025-03-18 16:29:11.827 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 69.2555ms
+2025-03-18 16:29:11.927 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_vs/browserLink - 200 null text/javascript; charset=UTF-8 110.757ms
+2025-03-18 16:29:12.469 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - null null
+2025-03-18 16:29:12.561 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 89.0251ms
+2025-03-18 17:09:02.207 +05:30 [INF] User profile is available. Using 'C:\Users\DELL\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-18 17:09:02.929 +05:30 [INF] Now listening on: https://localhost:7047
+2025-03-18 17:09:02.932 +05:30 [INF] Now listening on: http://localhost:5118
+2025-03-18 17:09:03.573 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-18 17:09:03.576 +05:30 [INF] Hosting environment: Development
+2025-03-18 17:09:03.578 +05:30 [INF] Content root path: C:\Users\DELL\source\repos\StudentCorewebAPI_Project\StudentCorewebAPI_Project
+2025-03-18 17:09:04.146 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.html - null null
+2025-03-18 17:09:04.726 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.html - 200 null text/html;charset=utf-8 596.6141ms
+2025-03-18 17:09:04.787 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-18 17:09:04.787 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.js - null null
+2025-03-18 17:09:04.804 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_vs/browserLink - null null
+2025-03-18 17:09:04.834 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.js - 200 null application/javascript;charset=utf-8 47.511ms
+2025-03-18 17:09:04.847 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 60.873ms
+2025-03-18 17:09:04.932 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_vs/browserLink - 200 null text/javascript; charset=UTF-8 128.0311ms
+2025-03-18 17:09:05.431 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - null null
+2025-03-18 17:09:05.478 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 47.6312ms
+2025-03-18 17:12:33.168 +05:30 [INF] User profile is available. Using 'C:\Users\DELL\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-18 17:12:33.719 +05:30 [INF] Now listening on: https://localhost:7047
+2025-03-18 17:12:33.722 +05:30 [INF] Now listening on: http://localhost:5118
+2025-03-18 17:12:34.158 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-18 17:12:34.165 +05:30 [INF] Hosting environment: Development
+2025-03-18 17:12:34.171 +05:30 [INF] Content root path: C:\Users\DELL\source\repos\StudentCorewebAPI_Project\StudentCorewebAPI_Project
+2025-03-18 17:12:34.913 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.html - null null
+2025-03-18 17:12:35.488 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.html - 200 null text/html;charset=utf-8 594.0729ms
+2025-03-18 17:12:35.573 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-18 17:12:35.573 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.js - null null
+2025-03-18 17:12:35.594 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.js - 200 null application/javascript;charset=utf-8 21.4221ms
+2025-03-18 17:12:35.597 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_vs/browserLink - null null
+2025-03-18 17:12:35.617 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 45.2235ms
+2025-03-18 17:12:35.703 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_vs/browserLink - 200 null text/javascript; charset=UTF-8 106.4091ms
+2025-03-18 17:12:36.226 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - null null
+2025-03-18 17:12:36.266 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 40.0609ms
+2025-03-18 17:14:59.911 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/auth/login - application/json 59
+2025-03-18 17:14:59.957 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project)'
+2025-03-18 17:15:00.029 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(StudentCorewebAPI_Project.Models.LoginRequest) on controller StudentCorewebAPI_Project.Controllers.AuthController (StudentCorewebAPI_Project).
+2025-03-18 17:15:01.918 +05:30 [INF] Executed DbCommand (151ms) [Parameters=[@__loginRequest_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__loginRequest_Email_0 AND [u].[IsDeleted] = CAST(0 AS bit)
+2025-03-18 17:15:02.515 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[RoleID], [r].[RoleName]
+FROM [UserRoles] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleID] = [r].[RoleID]
+WHERE [u].[UserId] = @__user_Id_0
+2025-03-18 17:15:02.575 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[LoginResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 17:15:02.595 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project) in 2562.1639ms
+2025-03-18 17:15:02.597 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.AuthController.Login (StudentCorewebAPI_Project)'
+2025-03-18 17:15:02.601 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 2648.6127 ms
+2025-03-18 17:15:02.609 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/auth/login - 200 null application/json; charset=utf-8 2701.2398ms
+2025-03-18 17:15:44.031 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/api/User/search - null null
+2025-03-18 17:15:44.149 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.GetAllUsers (StudentCorewebAPI_Project)'
+2025-03-18 17:15:44.159 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers(PaginationParams) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 17:15:44.214 +05:30 [INF] Fetching users with Query: , SortBy: , SortOrder: false, PageNumber: 1, PageSize: 10
+2025-03-18 17:15:44.273 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit)
+2025-03-18 17:15:44.323 +05:30 [INF] Executed DbCommand (33ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [u].[FirstName]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2025-03-18 17:15:44.328 +05:30 [INF] Users retrieved successfully.
+2025-03-18 17:15:44.330 +05:30 [INF] Executing OkObjectResult, writing value of type 'PagedResponse`1[[StudentCorewebAPI_Project.Models.User, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 17:15:44.339 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.GetAllUsers (StudentCorewebAPI_Project) in 177.8805ms
+2025-03-18 17:15:44.340 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.GetAllUsers (StudentCorewebAPI_Project)'
+2025-03-18 17:15:44.341 +05:30 [INF] HTTP GET /api/User/search responded 200 in 192.1104 ms
+2025-03-18 17:15:44.342 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/api/User/search - 200 null application/json; charset=utf-8 311.5393ms
+2025-03-18 17:15:58.119 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/api/User/search?SearchQuery=smith - null null
+2025-03-18 17:15:58.129 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.GetAllUsers (StudentCorewebAPI_Project)'
+2025-03-18 17:15:58.131 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers(PaginationParams) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 17:15:58.157 +05:30 [INF] Fetching users with Query: smith, SortBy: , SortOrder: false, PageNumber: 1, PageSize: 10
+2025-03-18 17:15:58.205 +05:30 [INF] Executed DbCommand (29ms) [Parameters=[@__paginationParams_SearchQuery_0_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit) AND ([u].[FirstName] LIKE @__paginationParams_SearchQuery_0_contains ESCAPE N'\' OR [u].[LastName] LIKE @__paginationParams_SearchQuery_0_contains ESCAPE N'\' OR [u].[Email] LIKE @__paginationParams_SearchQuery_0_contains ESCAPE N'\')
+2025-03-18 17:15:58.223 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__paginationParams_SearchQuery_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit) AND ([u].[FirstName] LIKE @__paginationParams_SearchQuery_0_contains ESCAPE N'\' OR [u].[LastName] LIKE @__paginationParams_SearchQuery_0_contains ESCAPE N'\' OR [u].[Email] LIKE @__paginationParams_SearchQuery_0_contains ESCAPE N'\')
+ORDER BY [u].[FirstName]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2025-03-18 17:15:58.225 +05:30 [INF] Users retrieved successfully.
+2025-03-18 17:15:58.226 +05:30 [INF] Executing OkObjectResult, writing value of type 'PagedResponse`1[[StudentCorewebAPI_Project.Models.User, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 17:15:58.228 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.GetAllUsers (StudentCorewebAPI_Project) in 94.7746ms
+2025-03-18 17:15:58.229 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.GetAllUsers (StudentCorewebAPI_Project)'
+2025-03-18 17:15:58.230 +05:30 [INF] HTTP GET /api/User/search responded 200 in 101.1150 ms
+2025-03-18 17:15:58.231 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/api/User/search?SearchQuery=smith - 200 null application/json; charset=utf-8 113.2236ms
+2025-03-18 17:16:10.731 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/api/User/search?SearchQuery=smith&IsDescending=false - null null
+2025-03-18 17:16:10.741 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.GetAllUsers (StudentCorewebAPI_Project)'
+2025-03-18 17:16:10.742 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers(PaginationParams) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 17:16:10.748 +05:30 [INF] Fetching users with Query: smith, SortBy: , SortOrder: false, PageNumber: 1, PageSize: 10
+2025-03-18 17:16:10.768 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@__paginationParams_SearchQuery_0_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit) AND ([u].[FirstName] LIKE @__paginationParams_SearchQuery_0_contains ESCAPE N'\' OR [u].[LastName] LIKE @__paginationParams_SearchQuery_0_contains ESCAPE N'\' OR [u].[Email] LIKE @__paginationParams_SearchQuery_0_contains ESCAPE N'\')
+2025-03-18 17:16:10.775 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__paginationParams_SearchQuery_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit) AND ([u].[FirstName] LIKE @__paginationParams_SearchQuery_0_contains ESCAPE N'\' OR [u].[LastName] LIKE @__paginationParams_SearchQuery_0_contains ESCAPE N'\' OR [u].[Email] LIKE @__paginationParams_SearchQuery_0_contains ESCAPE N'\')
+ORDER BY [u].[FirstName]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2025-03-18 17:16:10.777 +05:30 [INF] Users retrieved successfully.
+2025-03-18 17:16:10.778 +05:30 [INF] Executing OkObjectResult, writing value of type 'PagedResponse`1[[StudentCorewebAPI_Project.Models.User, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 17:16:10.779 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.GetAllUsers (StudentCorewebAPI_Project) in 35.0449ms
+2025-03-18 17:16:10.781 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.GetAllUsers (StudentCorewebAPI_Project)'
+2025-03-18 17:16:10.782 +05:30 [INF] HTTP GET /api/User/search responded 200 in 41.7432 ms
+2025-03-18 17:16:10.784 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/api/User/search?SearchQuery=smith&IsDescending=false - 200 null application/json; charset=utf-8 53.5096ms
+2025-03-18 17:16:49.798 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/api/User/search?SearchQuery=smith&PageNumber=2 - null null
+2025-03-18 17:16:49.809 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.GetAllUsers (StudentCorewebAPI_Project)'
+2025-03-18 17:16:49.811 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers(PaginationParams) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 17:16:49.815 +05:30 [INF] Fetching users with Query: smith, SortBy: , SortOrder: false, PageNumber: 2, PageSize: 10
+2025-03-18 17:16:49.822 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__paginationParams_SearchQuery_0_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit) AND ([u].[FirstName] LIKE @__paginationParams_SearchQuery_0_contains ESCAPE N'\' OR [u].[LastName] LIKE @__paginationParams_SearchQuery_0_contains ESCAPE N'\' OR [u].[Email] LIKE @__paginationParams_SearchQuery_0_contains ESCAPE N'\')
+2025-03-18 17:16:49.834 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__paginationParams_SearchQuery_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit) AND ([u].[FirstName] LIKE @__paginationParams_SearchQuery_0_contains ESCAPE N'\' OR [u].[LastName] LIKE @__paginationParams_SearchQuery_0_contains ESCAPE N'\' OR [u].[Email] LIKE @__paginationParams_SearchQuery_0_contains ESCAPE N'\')
+ORDER BY [u].[FirstName]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2025-03-18 17:16:49.837 +05:30 [WRN] No users found for query: smith
+2025-03-18 17:16:49.839 +05:30 [INF] Executing NotFoundObjectResult, writing value of type 'PagedResponse`1[[StudentCorewebAPI_Project.Models.User, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 17:16:49.840 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.GetAllUsers (StudentCorewebAPI_Project) in 27.8085ms
+2025-03-18 17:16:49.842 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.GetAllUsers (StudentCorewebAPI_Project)'
+2025-03-18 17:16:49.843 +05:30 [INF] HTTP GET /api/User/search responded 404 in 33.4541 ms
+2025-03-18 17:16:49.844 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/api/User/search?SearchQuery=smith&PageNumber=2 - 404 null application/json; charset=utf-8 46.3048ms
+2025-03-18 17:17:19.478 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/api/User/search - null null
+2025-03-18 17:17:19.490 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.GetAllUsers (StudentCorewebAPI_Project)'
+2025-03-18 17:17:19.491 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers(PaginationParams) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 17:17:19.494 +05:30 [INF] Fetching users with Query: , SortBy: , SortOrder: false, PageNumber: 1, PageSize: 10
+2025-03-18 17:17:19.507 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit)
+2025-03-18 17:17:19.513 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [u].[FirstName]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2025-03-18 17:17:19.515 +05:30 [INF] Users retrieved successfully.
+2025-03-18 17:17:19.516 +05:30 [INF] Executing OkObjectResult, writing value of type 'PagedResponse`1[[StudentCorewebAPI_Project.Models.User, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 17:17:19.518 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.GetAllUsers (StudentCorewebAPI_Project) in 25.7462ms
+2025-03-18 17:17:19.519 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.GetAllUsers (StudentCorewebAPI_Project)'
+2025-03-18 17:17:19.520 +05:30 [INF] HTTP GET /api/User/search responded 200 in 30.3078 ms
+2025-03-18 17:17:19.522 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/api/User/search - 200 null application/json; charset=utf-8 43.4162ms
+2025-03-18 17:18:28.225 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/User - application/json 201
+2025-03-18 17:18:28.238 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddUser (StudentCorewebAPI_Project)'
+2025-03-18 17:18:28.242 +05:30 [INF] Route matched with {action = "AddUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddUser(StudentCorewebAPI_Project.DTOs.AddUserDto) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 17:18:28.709 +05:30 [INF] Executed DbCommand (29ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = Int64), @p6='?' (Size = 4000), @p7='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [Email], [FirstName], [IsDeleted], [LastName], [Mobile], [PasswordHash], [PasswordSalt])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-03-18 17:18:28.728 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__userDto_RoleID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleID], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleID] = @__userDto_RoleID_0
+2025-03-18 17:18:28.732 +05:30 [ERR] Failed to add user.
+2025-03-18 17:18:28.734 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[StudentCorewebAPI_Project.DTOs.UserResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 17:18:28.740 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.AddUser (StudentCorewebAPI_Project) in 496.7216ms
+2025-03-18 17:18:28.742 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddUser (StudentCorewebAPI_Project)'
+2025-03-18 17:18:28.742 +05:30 [INF] HTTP POST /api/User responded 400 in 504.8744 ms
+2025-03-18 17:18:28.744 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/User - 400 null application/json; charset=utf-8 519.5305ms
+2025-03-18 17:19:42.755 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate - application/json 201
+2025-03-18 17:19:42.765 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 17:19:42.769 +05:30 [INF] Route matched with {action = "AddOrUpdateUserDto", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddOrUpdateUserDto(System.Nullable`1[System.Guid], StudentCorewebAPI_Project.DTOs.AddUserDto) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 17:19:42.786 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__userDto_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__userDto_Email_0
+2025-03-18 17:19:42.789 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[StudentCorewebAPI_Project.DTOs.UserResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 17:19:42.790 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project) in 18.6554ms
+2025-03-18 17:19:42.791 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 17:19:42.791 +05:30 [INF] HTTP POST /api/User/AddOrUpdate responded 400 in 26.8828 ms
+2025-03-18 17:19:42.793 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate - 400 null application/json; charset=utf-8 39.1033ms
+2025-03-18 17:20:07.329 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/User - application/json 201
+2025-03-18 17:20:07.336 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddUser (StudentCorewebAPI_Project)'
+2025-03-18 17:20:07.337 +05:30 [INF] Route matched with {action = "AddUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddUser(StudentCorewebAPI_Project.DTOs.AddUserDto) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 17:20:07.477 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = Int64), @p6='?' (Size = 4000), @p7='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [Email], [FirstName], [IsDeleted], [LastName], [Mobile], [PasswordHash], [PasswordSalt])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-03-18 17:20:07.484 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__userDto_RoleID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleID], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleID] = @__userDto_RoleID_0
+2025-03-18 17:20:07.506 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [UserRoles] ([Id], [RoleID], [UserId])
+VALUES (@p0, @p1, @p2);
+2025-03-18 17:20:07.510 +05:30 [INF] User added successfully with ID: "70884d26-11d4-48e7-bef1-448c51361a7e"
+2025-03-18 17:20:07.513 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[StudentCorewebAPI_Project.DTOs.UserResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 17:20:07.547 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.AddUser (StudentCorewebAPI_Project) in 208.8193ms
+2025-03-18 17:20:07.549 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddUser (StudentCorewebAPI_Project)'
+2025-03-18 17:20:07.550 +05:30 [INF] HTTP POST /api/User responded 201 in 214.4647 ms
+2025-03-18 17:20:07.552 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/User - 201 null application/json; charset=utf-8 223.0316ms
+2025-03-18 17:20:15.657 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate - application/json 201
+2025-03-18 17:20:15.661 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 17:20:15.662 +05:30 [INF] Route matched with {action = "AddOrUpdateUserDto", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddOrUpdateUserDto(System.Nullable`1[System.Guid], StudentCorewebAPI_Project.DTOs.AddUserDto) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 17:20:15.672 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__userDto_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__userDto_Email_0
+2025-03-18 17:20:15.675 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[StudentCorewebAPI_Project.DTOs.UserResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 17:20:15.676 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project) in 12.2274ms
+2025-03-18 17:20:15.677 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 17:20:15.678 +05:30 [INF] HTTP POST /api/User/AddOrUpdate responded 400 in 17.4257 ms
+2025-03-18 17:20:15.680 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate - 400 null application/json; charset=utf-8 22.8429ms
+2025-03-18 17:20:39.135 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate?id=70884d26-11d4-48e7-bef1-448c51361a7e - application/json 201
+2025-03-18 17:20:39.148 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 17:20:39.149 +05:30 [INF] Route matched with {action = "AddOrUpdateUserDto", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddOrUpdateUserDto(System.Nullable`1[System.Guid], StudentCorewebAPI_Project.DTOs.AddUserDto) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 17:20:39.167 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0 AND [u].[IsDeleted] = CAST(0 AS bit)
+2025-03-18 17:20:39.182 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__userDto_RoleID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleID] = @__userDto_RoleID_0
+2025-03-18 17:20:39.183 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[StudentCorewebAPI_Project.DTOs.UserResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 17:20:39.185 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project) in 34.0601ms
+2025-03-18 17:20:39.186 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 17:20:39.187 +05:30 [INF] HTTP POST /api/User/AddOrUpdate responded 200 in 38.8713 ms
+2025-03-18 17:20:39.188 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate?id=70884d26-11d4-48e7-bef1-448c51361a7e - 200 null application/json; charset=utf-8 54.1165ms
+2025-03-18 17:20:58.124 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate?id=70884d26-11d4-48e7-bef1-448c51361a7e - application/json 201
+2025-03-18 17:20:58.128 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 17:20:58.129 +05:30 [INF] Route matched with {action = "AddOrUpdateUserDto", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddOrUpdateUserDto(System.Nullable`1[System.Guid], StudentCorewebAPI_Project.DTOs.AddUserDto) on controller StudentCorewebAPI_Project.Controllers.UserController (StudentCorewebAPI_Project).
+2025-03-18 17:20:58.137 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[IsDeleted], [u].[LastName], [u].[Mobile], [u].[PasswordHash], [u].[PasswordSalt]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0 AND [u].[IsDeleted] = CAST(0 AS bit)
+2025-03-18 17:20:58.161 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Mobile] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2025-03-18 17:20:58.169 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__userDto_RoleID_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleID] = @__userDto_RoleID_0
+2025-03-18 17:20:58.171 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.CommonApiResponse.ApiResponse`1[[StudentCorewebAPI_Project.DTOs.UserResponseDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-18 17:20:58.172 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project) in 41.5744ms
+2025-03-18 17:20:58.173 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.UserController.AddOrUpdateUserDto (StudentCorewebAPI_Project)'
+2025-03-18 17:20:58.174 +05:30 [INF] HTTP POST /api/User/AddOrUpdate responded 200 in 46.1472 ms
+2025-03-18 17:20:58.175 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/User/AddOrUpdate?id=70884d26-11d4-48e7-bef1-448c51361a7e - 200 null application/json; charset=utf-8 51.7877ms

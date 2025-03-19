@@ -1,0 +1,190 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\DELL\\source\\repos\\StudentCorewebAPI_Project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{292AA3B8-F1C3-4583-AFDD-FF8DF0F9558B}|StudentCorewebAPI_Project\\StudentCorewebAPI_Project.csproj|c:\\users\\dell\\source\\repos\\studentcorewebapi_project\\studentcorewebapi_project\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{292AA3B8-F1C3-4583-AFDD-FF8DF0F9558B}|StudentCorewebAPI_Project\\StudentCorewebAPI_Project.csproj|solutionrelative:studentcorewebapi_project\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{292AA3B8-F1C3-4583-AFDD-FF8DF0F9558B}|StudentCorewebAPI_Project\\StudentCorewebAPI_Project.csproj|c:\\users\\dell\\source\\repos\\studentcorewebapi_project\\studentcorewebapi_project\\enums\\userroleenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{292AA3B8-F1C3-4583-AFDD-FF8DF0F9558B}|StudentCorewebAPI_Project\\StudentCorewebAPI_Project.csproj|solutionrelative:studentcorewebapi_project\\enums\\userroleenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{292AA3B8-F1C3-4583-AFDD-FF8DF0F9558B}|StudentCorewebAPI_Project\\StudentCorewebAPI_Project.csproj|c:\\users\\dell\\source\\repos\\studentcorewebapi_project\\studentcorewebapi_project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{292AA3B8-F1C3-4583-AFDD-FF8DF0F9558B}|StudentCorewebAPI_Project\\StudentCorewebAPI_Project.csproj|solutionrelative:studentcorewebapi_project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{292AA3B8-F1C3-4583-AFDD-FF8DF0F9558B}|StudentCorewebAPI_Project\\StudentCorewebAPI_Project.csproj|c:\\users\\dell\\source\\repos\\studentcorewebapi_project\\studentcorewebapi_project\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{292AA3B8-F1C3-4583-AFDD-FF8DF0F9558B}|StudentCorewebAPI_Project\\StudentCorewebAPI_Project.csproj|solutionrelative:studentcorewebapi_project\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{292AA3B8-F1C3-4583-AFDD-FF8DF0F9558B}|StudentCorewebAPI_Project\\StudentCorewebAPI_Project.csproj|c:\\users\\dell\\source\\repos\\studentcorewebapi_project\\studentcorewebapi_project\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{292AA3B8-F1C3-4583-AFDD-FF8DF0F9558B}|StudentCorewebAPI_Project\\StudentCorewebAPI_Project.csproj|solutionrelative:studentcorewebapi_project\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{292AA3B8-F1C3-4583-AFDD-FF8DF0F9558B}|StudentCorewebAPI_Project\\StudentCorewebAPI_Project.csproj|c:\\users\\dell\\source\\repos\\studentcorewebapi_project\\studentcorewebapi_project\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{292AA3B8-F1C3-4583-AFDD-FF8DF0F9558B}|StudentCorewebAPI_Project\\StudentCorewebAPI_Project.csproj|solutionrelative:studentcorewebapi_project\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{292AA3B8-F1C3-4583-AFDD-FF8DF0F9558B}|StudentCorewebAPI_Project\\StudentCorewebAPI_Project.csproj|c:\\users\\dell\\source\\repos\\studentcorewebapi_project\\studentcorewebapi_project\\repository_interface\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{292AA3B8-F1C3-4583-AFDD-FF8DF0F9558B}|StudentCorewebAPI_Project\\StudentCorewebAPI_Project.csproj|solutionrelative:studentcorewebapi_project\\repository_interface\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{292AA3B8-F1C3-4583-AFDD-FF8DF0F9558B}|StudentCorewebAPI_Project\\StudentCorewebAPI_Project.csproj|c:\\users\\dell\\source\\repos\\studentcorewebapi_project\\studentcorewebapi_project\\enums\\apimessages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{292AA3B8-F1C3-4583-AFDD-FF8DF0F9558B}|StudentCorewebAPI_Project\\StudentCorewebAPI_Project.csproj|solutionrelative:studentcorewebapi_project\\enums\\apimessages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{292AA3B8-F1C3-4583-AFDD-FF8DF0F9558B}|StudentCorewebAPI_Project\\StudentCorewebAPI_Project.csproj|c:\\users\\dell\\source\\repos\\studentcorewebapi_project\\studentcorewebapi_project\\enums\\enummessages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{292AA3B8-F1C3-4583-AFDD-FF8DF0F9558B}|StudentCorewebAPI_Project\\StudentCorewebAPI_Project.csproj|solutionrelative:studentcorewebapi_project\\enums\\enummessages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{292AA3B8-F1C3-4583-AFDD-FF8DF0F9558B}|StudentCorewebAPI_Project\\StudentCorewebAPI_Project.csproj|c:\\users\\dell\\source\\repos\\studentcorewebapi_project\\studentcorewebapi_project\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{292AA3B8-F1C3-4583-AFDD-FF8DF0F9558B}|StudentCorewebAPI_Project\\StudentCorewebAPI_Project.csproj|solutionrelative:studentcorewebapi_project\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 100,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\StudentCorewebAPI_Project\\StudentCorewebAPI_Project\\appsettings.json",
+              "RelativeDocumentMoniker": "StudentCorewebAPI_Project\\appsettings.json",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\StudentCorewebAPI_Project\\StudentCorewebAPI_Project\\appsettings.json",
+              "RelativeToolTip": "StudentCorewebAPI_Project\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-19T09:29:14.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\StudentCorewebAPI_Project\\StudentCorewebAPI_Project\\Repository_Interface\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "StudentCorewebAPI_Project\\Repository_Interface\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\StudentCorewebAPI_Project\\StudentCorewebAPI_Project\\Repository_Interface\\IUserRepository.cs",
+              "RelativeToolTip": "StudentCorewebAPI_Project\\Repository_Interface\\IUserRepository.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBIAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T07:43:24.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "JwtService.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\StudentCorewebAPI_Project\\StudentCorewebAPI_Project\\Services\\JwtService.cs",
+              "RelativeDocumentMoniker": "StudentCorewebAPI_Project\\Services\\JwtService.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\StudentCorewebAPI_Project\\StudentCorewebAPI_Project\\Services\\JwtService.cs",
+              "RelativeToolTip": "StudentCorewebAPI_Project\\Services\\JwtService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwB0AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T07:23:06.778Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\StudentCorewebAPI_Project\\StudentCorewebAPI_Project\\Program.cs",
+              "RelativeDocumentMoniker": "StudentCorewebAPI_Project\\Program.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\StudentCorewebAPI_Project\\StudentCorewebAPI_Project\\Program.cs",
+              "RelativeToolTip": "StudentCorewebAPI_Project\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T07:16:05.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ApiMessages.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\StudentCorewebAPI_Project\\StudentCorewebAPI_Project\\Enums\\ApiMessages.cs",
+              "RelativeDocumentMoniker": "StudentCorewebAPI_Project\\Enums\\ApiMessages.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\StudentCorewebAPI_Project\\StudentCorewebAPI_Project\\Enums\\ApiMessages.cs",
+              "RelativeToolTip": "StudentCorewebAPI_Project\\Enums\\ApiMessages.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T08:35:14.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EnumMessages.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\StudentCorewebAPI_Project\\StudentCorewebAPI_Project\\Enums\\EnumMessages.cs",
+              "RelativeDocumentMoniker": "StudentCorewebAPI_Project\\Enums\\EnumMessages.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\StudentCorewebAPI_Project\\StudentCorewebAPI_Project\\Enums\\EnumMessages.cs",
+              "RelativeToolTip": "StudentCorewebAPI_Project\\Enums\\EnumMessages.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T08:31:12.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\StudentCorewebAPI_Project\\StudentCorewebAPI_Project\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "StudentCorewebAPI_Project\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\StudentCorewebAPI_Project\\StudentCorewebAPI_Project\\Controllers\\UserController.cs*",
+              "RelativeToolTip": "StudentCorewebAPI_Project\\Controllers\\UserController.cs*",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAqwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T11:35:26.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserRoleEnum.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\StudentCorewebAPI_Project\\StudentCorewebAPI_Project\\Enums\\UserRoleEnum.cs",
+              "RelativeDocumentMoniker": "StudentCorewebAPI_Project\\Enums\\UserRoleEnum.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\StudentCorewebAPI_Project\\StudentCorewebAPI_Project\\Enums\\UserRoleEnum.cs",
+              "RelativeToolTip": "StudentCorewebAPI_Project\\Enums\\UserRoleEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T05:44:00.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\StudentCorewebAPI_Project\\StudentCorewebAPI_Project\\Repository\\UserRepository.cs",
+              "RelativeDocumentMoniker": "StudentCorewebAPI_Project\\Repository\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\StudentCorewebAPI_Project\\StudentCorewebAPI_Project\\Repository\\UserRepository.cs",
+              "RelativeToolTip": "StudentCorewebAPI_Project\\Repository\\UserRepository.cs",
+              "ViewState": "AgIAAJQAAAAAAAAAAAA2wKIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T11:45:29.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\StudentCorewebAPI_Project\\StudentCorewebAPI_Project\\Models\\Role.cs",
+              "RelativeDocumentMoniker": "StudentCorewebAPI_Project\\Models\\Role.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\StudentCorewebAPI_Project\\StudentCorewebAPI_Project\\Models\\Role.cs",
+              "RelativeToolTip": "StudentCorewebAPI_Project\\Models\\Role.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T10:13:12.971Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

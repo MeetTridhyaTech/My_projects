@@ -1,0 +1,594 @@
+2025-03-02 02:09:53.494 +05:30 [INF] Now listening on: https://localhost:7047
+2025-03-02 02:09:53.575 +05:30 [INF] Now listening on: http://localhost:5118
+2025-03-02 02:09:53.773 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-02 02:09:53.775 +05:30 [INF] Hosting environment: Development
+2025-03-02 02:09:53.777 +05:30 [INF] Content root path: C:\Users\DELL\source\repos\StudentCorewebAPI_Project\StudentCorewebAPI_Project
+2025-03-02 02:10:00.880 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.html - null null
+2025-03-02 02:10:01.420 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.html - 200 null text/html;charset=utf-8 559.3701ms
+2025-03-02 02:10:01.522 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/swagger-ui-bundle.js - null null
+2025-03-02 02:10:01.522 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/swagger-ui-standalone-preset.js - null null
+2025-03-02 02:10:01.522 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.js - null null
+2025-03-02 02:10:01.522 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.css - null null
+2025-03-02 02:10:01.522 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-02 02:10:01.522 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/swagger-ui.css - null null
+2025-03-02 02:10:01.561 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.js - 200 null application/javascript;charset=utf-8 38.9918ms
+2025-03-02 02:10:01.563 +05:30 [INF] The file /swagger-ui-bundle.js was not modified
+2025-03-02 02:10:01.563 +05:30 [INF] The file /swagger-ui-standalone-preset.js was not modified
+2025-03-02 02:10:01.565 +05:30 [INF] The file /index.css was not modified
+2025-03-02 02:10:01.581 +05:30 [INF] The file /swagger-ui.css was not modified
+2025-03-02 02:10:01.612 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/swagger-ui-bundle.js - 304 null text/javascript 90.658ms
+2025-03-02 02:10:01.612 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 91.1771ms
+2025-03-02 02:10:01.614 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/swagger-ui-standalone-preset.js - 304 null text/javascript 93.0209ms
+2025-03-02 02:10:01.617 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.css - 304 null text/css 96.0275ms
+2025-03-02 02:10:01.622 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/swagger-ui.css - 304 null text/css 100.639ms
+2025-03-02 02:10:01.637 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_vs/browserLink - null null
+2025-03-02 02:10:01.864 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_vs/browserLink - 200 null text/javascript; charset=UTF-8 227.705ms
+2025-03-02 02:10:02.162 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - null null
+2025-03-02 02:10:02.211 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 49.4936ms
+2025-03-02 02:10:13.715 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/api/Student?PageNumber=1&PageSize=10 - null null
+2025-03-02 02:10:13.733 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetStudents (StudentCorewebAPI_Project)'
+2025-03-02 02:10:13.803 +05:30 [INF] Route matched with {action = "GetStudents", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetStudents(Int32, Int32) on controller StudentCorewebAPI_Project.Controllers.StudentController (StudentCorewebAPI_Project).
+2025-03-02 02:10:14.421 +05:30 [INF] Fetching students - Page: 1, Size: 10
+2025-03-02 02:10:16.893 +05:30 [INF] Executed DbCommand (212ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Email], [s].[FirstName], [s].[IsDeleted], [s].[LastName], [s].[Mobile]
+FROM [Students] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit)
+2025-03-02 02:10:17.097 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.Models.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-02 02:10:17.148 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.StudentController.GetStudents (StudentCorewebAPI_Project) in 3333.8751ms
+2025-03-02 02:10:17.152 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetStudents (StudentCorewebAPI_Project)'
+2025-03-02 02:10:17.161 +05:30 [INF] HTTP GET /api/Student responded 200 in 3432.0827 ms
+2025-03-02 02:10:17.182 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/api/Student?PageNumber=1&PageSize=10 - 200 null application/json; charset=utf-8 3467.8971ms
+2025-03-02 02:10:45.718 +05:30 [INF] Request starting HTTP/2 DELETE https://localhost:7047/api/Student/002ae098-b62d-4674-aea8-2c8ee12a6f29 - null null
+2025-03-02 02:10:45.727 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.DeleteStudent (StudentCorewebAPI_Project)'
+2025-03-02 02:10:45.743 +05:30 [INF] Route matched with {action = "DeleteStudent", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteStudent(System.Guid) on controller StudentCorewebAPI_Project.Controllers.StudentController (StudentCorewebAPI_Project).
+2025-03-02 02:10:45.759 +05:30 [INF] Attempting to soft delete student with ID: "002ae098-b62d-4674-aea8-2c8ee12a6f29"
+2025-03-02 02:10:45.948 +05:30 [INF] Executed DbCommand (86ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Email], [s].[FirstName], [s].[IsDeleted], [s].[LastName], [s].[Mobile]
+FROM [Students] AS [s]
+WHERE [s].[Id] = @__id_0 AND [s].[IsDeleted] = CAST(0 AS bit)
+2025-03-02 02:10:45.969 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Email], [s].[FirstName], [s].[IsDeleted], [s].[LastName], [s].[Mobile]
+FROM [Students] AS [s]
+WHERE [s].[Id] = @__id_0 AND [s].[IsDeleted] = CAST(0 AS bit)
+2025-03-02 02:10:46.157 +05:30 [INF] Executed DbCommand (36ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Students] SET [IsDeleted] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2025-03-02 02:10:46.190 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.Models.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-02 02:10:46.198 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.StudentController.DeleteStudent (StudentCorewebAPI_Project) in 448.8953ms
+2025-03-02 02:10:46.202 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.DeleteStudent (StudentCorewebAPI_Project)'
+2025-03-02 02:10:46.204 +05:30 [INF] HTTP DELETE /api/Student/002ae098-b62d-4674-aea8-2c8ee12a6f29 responded 200 in 477.3893 ms
+2025-03-02 02:10:46.208 +05:30 [INF] Request finished HTTP/2 DELETE https://localhost:7047/api/Student/002ae098-b62d-4674-aea8-2c8ee12a6f29 - 200 null application/json; charset=utf-8 489.9778ms
+2025-03-02 02:10:58.472 +05:30 [INF] Request starting HTTP/2 DELETE https://localhost:7047/api/Student/002ae098-b62d-4674-aea8-2c8ee12a6f09 - null null
+2025-03-02 02:10:58.498 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.DeleteStudent (StudentCorewebAPI_Project)'
+2025-03-02 02:10:58.505 +05:30 [INF] Route matched with {action = "DeleteStudent", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteStudent(System.Guid) on controller StudentCorewebAPI_Project.Controllers.StudentController (StudentCorewebAPI_Project).
+2025-03-02 02:10:58.517 +05:30 [INF] Attempting to soft delete student with ID: "002ae098-b62d-4674-aea8-2c8ee12a6f09"
+2025-03-02 02:10:58.618 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Email], [s].[FirstName], [s].[IsDeleted], [s].[LastName], [s].[Mobile]
+FROM [Students] AS [s]
+WHERE [s].[Id] = @__id_0 AND [s].[IsDeleted] = CAST(0 AS bit)
+2025-03-02 02:10:58.625 +05:30 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-02 02:10:58.634 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.StudentController.DeleteStudent (StudentCorewebAPI_Project) in 124.2825ms
+2025-03-02 02:10:58.638 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.DeleteStudent (StudentCorewebAPI_Project)'
+2025-03-02 02:10:58.640 +05:30 [INF] HTTP DELETE /api/Student/002ae098-b62d-4674-aea8-2c8ee12a6f09 responded 404 in 142.6985 ms
+2025-03-02 02:10:58.645 +05:30 [INF] Request finished HTTP/2 DELETE https://localhost:7047/api/Student/002ae098-b62d-4674-aea8-2c8ee12a6f09 - 404 null application/json; charset=utf-8 172.9534ms
+2025-03-02 02:11:28.678 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/Student - application/json 87
+2025-03-02 02:11:28.684 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.AddStudent (StudentCorewebAPI_Project)'
+2025-03-02 02:11:28.695 +05:30 [INF] Route matched with {action = "AddStudent", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddStudent(StudentCorewebAPI_Project.DTOs.AddStudentDto) on controller StudentCorewebAPI_Project.Controllers.StudentController (StudentCorewebAPI_Project).
+2025-03-02 02:11:28.825 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-03-02 02:11:28.869 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.StudentController.AddStudent (StudentCorewebAPI_Project) in 170.8503ms
+2025-03-02 02:11:28.873 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.AddStudent (StudentCorewebAPI_Project)'
+2025-03-02 02:11:28.875 +05:30 [INF] HTTP POST /api/Student responded 400 in 190.7981 ms
+2025-03-02 02:11:28.878 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/Student - 400 null application/problem+json; charset=utf-8 200.3764ms
+2025-03-02 02:12:04.190 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/api/Student?PageNumber=1&PageSize=10 - null null
+2025-03-02 02:12:04.213 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetStudents (StudentCorewebAPI_Project)'
+2025-03-02 02:12:04.215 +05:30 [INF] Route matched with {action = "GetStudents", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetStudents(Int32, Int32) on controller StudentCorewebAPI_Project.Controllers.StudentController (StudentCorewebAPI_Project).
+2025-03-02 02:12:04.220 +05:30 [INF] Fetching students - Page: 1, Size: 10
+2025-03-02 02:12:04.236 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Email], [s].[FirstName], [s].[IsDeleted], [s].[LastName], [s].[Mobile]
+FROM [Students] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit)
+2025-03-02 02:12:04.244 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.Models.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-02 02:12:04.247 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.StudentController.GetStudents (StudentCorewebAPI_Project) in 28.1965ms
+2025-03-02 02:12:04.249 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetStudents (StudentCorewebAPI_Project)'
+2025-03-02 02:12:04.251 +05:30 [INF] HTTP GET /api/Student responded 200 in 38.5910 ms
+2025-03-02 02:12:04.255 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/api/Student?PageNumber=1&PageSize=10 - 200 null application/json; charset=utf-8 67.2494ms
+2025-03-02 02:14:01.087 +05:30 [INF] Request starting HTTP/2 DELETE https://localhost:7047/api/Student/4965F627-84A7-41A6-887A-FAF4B273F118 - null null
+2025-03-02 02:14:01.101 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.DeleteStudent (StudentCorewebAPI_Project)'
+2025-03-02 02:14:01.102 +05:30 [INF] Route matched with {action = "DeleteStudent", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteStudent(System.Guid) on controller StudentCorewebAPI_Project.Controllers.StudentController (StudentCorewebAPI_Project).
+2025-03-02 02:14:01.107 +05:30 [INF] Attempting to soft delete student with ID: "4965f627-84a7-41a6-887a-faf4b273f118"
+2025-03-02 02:14:01.130 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Email], [s].[FirstName], [s].[IsDeleted], [s].[LastName], [s].[Mobile]
+FROM [Students] AS [s]
+WHERE [s].[Id] = @__id_0 AND [s].[IsDeleted] = CAST(0 AS bit)
+2025-03-02 02:14:01.139 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Email], [s].[FirstName], [s].[IsDeleted], [s].[LastName], [s].[Mobile]
+FROM [Students] AS [s]
+WHERE [s].[Id] = @__id_0 AND [s].[IsDeleted] = CAST(0 AS bit)
+2025-03-02 02:14:01.155 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Students] SET [IsDeleted] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2025-03-02 02:14:01.159 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.Models.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-02 02:14:01.163 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.StudentController.DeleteStudent (StudentCorewebAPI_Project) in 56.4253ms
+2025-03-02 02:14:01.165 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.DeleteStudent (StudentCorewebAPI_Project)'
+2025-03-02 02:14:01.167 +05:30 [INF] HTTP DELETE /api/Student/4965F627-84A7-41A6-887A-FAF4B273F118 responded 200 in 66.4359 ms
+2025-03-02 02:14:01.171 +05:30 [INF] Request finished HTTP/2 DELETE https://localhost:7047/api/Student/4965F627-84A7-41A6-887A-FAF4B273F118 - 200 null application/json; charset=utf-8 83.966ms
+2025-03-02 02:15:24.726 +05:30 [INF] Request starting HTTP/2 DELETE https://localhost:7047/api/Student/2392D048-EEB0-4505-89EA-B97FBD850302 - null null
+2025-03-02 02:15:24.750 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.DeleteStudent (StudentCorewebAPI_Project)'
+2025-03-02 02:15:24.753 +05:30 [INF] Route matched with {action = "DeleteStudent", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteStudent(System.Guid) on controller StudentCorewebAPI_Project.Controllers.StudentController (StudentCorewebAPI_Project).
+2025-03-02 02:15:24.760 +05:30 [INF] Attempting to soft delete student with ID: "2392d048-eeb0-4505-89ea-b97fbd850302"
+2025-03-02 02:15:24.784 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Email], [s].[FirstName], [s].[IsDeleted], [s].[LastName], [s].[Mobile]
+FROM [Students] AS [s]
+WHERE [s].[Id] = @__id_0 AND [s].[IsDeleted] = CAST(0 AS bit)
+2025-03-02 02:15:24.796 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Email], [s].[FirstName], [s].[IsDeleted], [s].[LastName], [s].[Mobile]
+FROM [Students] AS [s]
+WHERE [s].[Id] = @__id_0 AND [s].[IsDeleted] = CAST(0 AS bit)
+2025-03-02 02:15:24.813 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Students] SET [IsDeleted] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2025-03-02 02:15:24.825 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.Models.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-02 02:15:24.828 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.StudentController.DeleteStudent (StudentCorewebAPI_Project) in 69.5624ms
+2025-03-02 02:15:24.859 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.DeleteStudent (StudentCorewebAPI_Project)'
+2025-03-02 02:15:24.876 +05:30 [INF] HTTP DELETE /api/Student/2392D048-EEB0-4505-89EA-B97FBD850302 responded 200 in 125.8155 ms
+2025-03-02 02:15:24.880 +05:30 [INF] Request finished HTTP/2 DELETE https://localhost:7047/api/Student/2392D048-EEB0-4505-89EA-B97FBD850302 - 200 null application/json; charset=utf-8 156.7277ms
+2025-03-02 18:28:17.117 +05:30 [INF] Now listening on: https://localhost:7047
+2025-03-02 18:28:17.152 +05:30 [INF] Now listening on: http://localhost:5118
+2025-03-02 18:28:17.232 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-02 18:28:17.233 +05:30 [INF] Hosting environment: Development
+2025-03-02 18:28:17.234 +05:30 [INF] Content root path: C:\Users\DELL\source\repos\StudentCorewebAPI_Project\StudentCorewebAPI_Project
+2025-03-02 18:28:18.109 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.html - null null
+2025-03-02 18:28:18.330 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.html - 200 null text/html;charset=utf-8 227.8797ms
+2025-03-02 18:28:18.374 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.js - null null
+2025-03-02 18:28:18.374 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-02 18:28:18.396 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.js - 200 null application/javascript;charset=utf-8 23.2654ms
+2025-03-02 18:28:18.403 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_vs/browserLink - null null
+2025-03-02 18:28:18.417 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 45.2273ms
+2025-03-02 18:28:18.558 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_vs/browserLink - 200 null text/javascript; charset=UTF-8 155.8937ms
+2025-03-02 18:28:18.608 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - null null
+2025-03-02 18:28:18.631 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 22.5958ms
+2025-03-02 18:28:43.410 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/api/Student/search?sortBy=Meet&sortOrder=asc&pageNumber=1&pageSize=10 - null null
+2025-03-02 18:28:43.424 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project)'
+2025-03-02 18:28:43.467 +05:30 [INF] Route matched with {action = "GetAllStudents", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllStudents(System.String, System.String, System.String, Int32, Int32) on controller StudentCorewebAPI_Project.Controllers.StudentController (StudentCorewebAPI_Project).
+2025-03-02 18:28:43.895 +05:30 [INF] Fetching students with search, sorting, and pagination - Query: , SortBy: Meet, SortOrder: asc, Page: 1, Size: 10
+2025-03-02 18:28:45.162 +05:30 [INF] Executed DbCommand (167ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Email], [s].[FirstName], [s].[IsDeleted], [s].[LastName], [s].[Mobile]
+FROM [Students] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [s].[FirstName]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2025-03-02 18:28:45.251 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.Models.ApiResponse`1[[System.Collections.Generic.List`1[[StudentCorewebAPI_Project.Models.Student, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-02 18:28:45.274 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project) in 1802.347ms
+2025-03-02 18:28:45.276 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project)'
+2025-03-02 18:28:45.279 +05:30 [INF] HTTP GET /api/Student/search responded 200 in 1861.8630 ms
+2025-03-02 18:28:45.288 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/api/Student/search?sortBy=Meet&sortOrder=asc&pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 1877.3385ms
+2025-03-02 18:29:21.355 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/api/Student/search?sortOrder=desc&pageNumber=1&pageSize=10 - null null
+2025-03-02 18:29:21.368 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project)'
+2025-03-02 18:29:21.370 +05:30 [INF] Route matched with {action = "GetAllStudents", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllStudents(System.String, System.String, System.String, Int32, Int32) on controller StudentCorewebAPI_Project.Controllers.StudentController (StudentCorewebAPI_Project).
+2025-03-02 18:29:21.375 +05:30 [INF] Fetching students with search, sorting, and pagination - Query: , SortBy: FirstName, SortOrder: desc, Page: 1, Size: 10
+2025-03-02 18:29:21.409 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Email], [s].[FirstName], [s].[IsDeleted], [s].[LastName], [s].[Mobile]
+FROM [Students] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [s].[FirstName] DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2025-03-02 18:29:21.413 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.Models.ApiResponse`1[[System.Collections.Generic.List`1[[StudentCorewebAPI_Project.Models.Student, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-02 18:29:21.415 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project) in 43.1783ms
+2025-03-02 18:29:21.417 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project)'
+2025-03-02 18:29:21.418 +05:30 [INF] HTTP GET /api/Student/search responded 200 in 50.5005 ms
+2025-03-02 18:29:21.421 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/api/Student/search?sortOrder=desc&pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 67.7761ms
+2025-03-02 18:29:41.389 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/api/Student/search?query=meet&sortOrder=desc&pageNumber=1&pageSize=10 - null null
+2025-03-02 18:29:41.393 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project)'
+2025-03-02 18:29:41.395 +05:30 [INF] Route matched with {action = "GetAllStudents", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllStudents(System.String, System.String, System.String, Int32, Int32) on controller StudentCorewebAPI_Project.Controllers.StudentController (StudentCorewebAPI_Project).
+2025-03-02 18:29:41.402 +05:30 [INF] Fetching students with search, sorting, and pagination - Query: meet, SortBy: FirstName, SortOrder: desc, Page: 1, Size: 10
+2025-03-02 18:29:41.498 +05:30 [INF] Executed DbCommand (29ms) [Parameters=[@__searchTerm_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Email], [s].[FirstName], [s].[IsDeleted], [s].[LastName], [s].[Mobile]
+FROM [Students] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit) AND ([s].[FirstName] LIKE @__searchTerm_0_contains ESCAPE N'\' OR [s].[LastName] LIKE @__searchTerm_0_contains ESCAPE N'\' OR [s].[Email] LIKE @__searchTerm_0_contains ESCAPE N'\')
+ORDER BY [s].[FirstName] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2025-03-02 18:29:41.501 +05:30 [INF] Executing NotFoundObjectResult, writing value of type 'StudentCorewebAPI_Project.Models.ApiResponse`1[[System.Collections.Generic.List`1[[StudentCorewebAPI_Project.Models.Student, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-02 18:29:41.503 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project) in 106.5121ms
+2025-03-02 18:29:41.504 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project)'
+2025-03-02 18:29:41.505 +05:30 [INF] HTTP GET /api/Student/search responded 404 in 112.1073 ms
+2025-03-02 18:29:41.507 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/api/Student/search?query=meet&sortOrder=desc&pageNumber=1&pageSize=10 - 404 null application/json; charset=utf-8 118.6602ms
+2025-03-02 18:29:42.668 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/api/Student/search?query=meet&sortOrder=desc&pageNumber=1&pageSize=10 - null null
+2025-03-02 18:29:42.671 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project)'
+2025-03-02 18:29:42.672 +05:30 [INF] Route matched with {action = "GetAllStudents", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllStudents(System.String, System.String, System.String, Int32, Int32) on controller StudentCorewebAPI_Project.Controllers.StudentController (StudentCorewebAPI_Project).
+2025-03-02 18:29:42.674 +05:30 [INF] Fetching students with search, sorting, and pagination - Query: meet, SortBy: FirstName, SortOrder: desc, Page: 1, Size: 10
+2025-03-02 18:29:42.683 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__searchTerm_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Email], [s].[FirstName], [s].[IsDeleted], [s].[LastName], [s].[Mobile]
+FROM [Students] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit) AND ([s].[FirstName] LIKE @__searchTerm_0_contains ESCAPE N'\' OR [s].[LastName] LIKE @__searchTerm_0_contains ESCAPE N'\' OR [s].[Email] LIKE @__searchTerm_0_contains ESCAPE N'\')
+ORDER BY [s].[FirstName] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2025-03-02 18:29:42.685 +05:30 [INF] Executing NotFoundObjectResult, writing value of type 'StudentCorewebAPI_Project.Models.ApiResponse`1[[System.Collections.Generic.List`1[[StudentCorewebAPI_Project.Models.Student, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-02 18:29:42.686 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project) in 13.026ms
+2025-03-02 18:29:42.687 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project)'
+2025-03-02 18:29:42.688 +05:30 [INF] HTTP GET /api/Student/search responded 404 in 17.6858 ms
+2025-03-02 18:29:42.690 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/api/Student/search?query=meet&sortOrder=desc&pageNumber=1&pageSize=10 - 404 null application/json; charset=utf-8 22.0683ms
+2025-03-02 18:29:51.926 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/api/Student/search?query=Meet&sortOrder=desc&pageNumber=1&pageSize=10 - null null
+2025-03-02 18:29:51.929 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project)'
+2025-03-02 18:29:51.930 +05:30 [INF] Route matched with {action = "GetAllStudents", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllStudents(System.String, System.String, System.String, Int32, Int32) on controller StudentCorewebAPI_Project.Controllers.StudentController (StudentCorewebAPI_Project).
+2025-03-02 18:29:51.934 +05:30 [INF] Fetching students with search, sorting, and pagination - Query: Meet, SortBy: FirstName, SortOrder: desc, Page: 1, Size: 10
+2025-03-02 18:29:51.944 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__searchTerm_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Email], [s].[FirstName], [s].[IsDeleted], [s].[LastName], [s].[Mobile]
+FROM [Students] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit) AND ([s].[FirstName] LIKE @__searchTerm_0_contains ESCAPE N'\' OR [s].[LastName] LIKE @__searchTerm_0_contains ESCAPE N'\' OR [s].[Email] LIKE @__searchTerm_0_contains ESCAPE N'\')
+ORDER BY [s].[FirstName] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2025-03-02 18:29:51.946 +05:30 [INF] Executing NotFoundObjectResult, writing value of type 'StudentCorewebAPI_Project.Models.ApiResponse`1[[System.Collections.Generic.List`1[[StudentCorewebAPI_Project.Models.Student, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-02 18:29:51.948 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project) in 15.2679ms
+2025-03-02 18:29:51.949 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project)'
+2025-03-02 18:29:51.952 +05:30 [INF] HTTP GET /api/Student/search responded 404 in 21.9220 ms
+2025-03-02 18:29:51.958 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/api/Student/search?query=Meet&sortOrder=desc&pageNumber=1&pageSize=10 - 404 null application/json; charset=utf-8 32.586ms
+2025-03-02 18:36:32.940 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.html/FirstName - null null
+2025-03-02 18:36:33.005 +05:30 [INF] HTTP GET /swagger/index.html/FirstName responded 404 in 1.3823 ms
+2025-03-02 18:36:33.011 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.html/FirstName - 404 0 null 73.0826ms
+2025-03-02 18:36:33.025 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7047/swagger/index.html/FirstName, Response status code: 404
+2025-03-02 18:36:35.352 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.html/FirstName - null null
+2025-03-02 18:36:35.379 +05:30 [INF] HTTP GET /swagger/index.html/FirstName responded 404 in 0.0608 ms
+2025-03-02 18:36:35.387 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.html/FirstName - 404 0 null 34.1226ms
+2025-03-02 18:36:35.406 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7047/swagger/index.html/FirstName, Response status code: 404
+2025-03-02 18:36:48.786 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-02 18:36:48.812 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 27.809ms
+2025-03-02 18:36:49.203 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - null null
+2025-03-02 18:36:49.261 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 58.4927ms
+2025-03-02 18:37:08.358 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/api/Student/search?sortBy=FirstName%20Meet&sortOrder=asc&pageNumber=1&pageSize=10 - null null
+2025-03-02 18:37:08.364 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project)'
+2025-03-02 18:37:08.377 +05:30 [INF] Route matched with {action = "GetAllStudents", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllStudents(System.String, System.String, System.String, Int32, Int32) on controller StudentCorewebAPI_Project.Controllers.StudentController (StudentCorewebAPI_Project).
+2025-03-02 18:37:08.405 +05:30 [INF] Fetching students with search, sorting, and pagination - Query: , SortBy: FirstName Meet, SortOrder: asc, Page: 1, Size: 10
+2025-03-02 18:37:08.538 +05:30 [INF] Executed DbCommand (49ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Email], [s].[FirstName], [s].[IsDeleted], [s].[LastName], [s].[Mobile]
+FROM [Students] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [s].[FirstName]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2025-03-02 18:37:08.550 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.Models.ApiResponse`1[[System.Collections.Generic.List`1[[StudentCorewebAPI_Project.Models.Student, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-02 18:37:08.557 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project) in 175.3956ms
+2025-03-02 18:37:08.563 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project)'
+2025-03-02 18:37:08.566 +05:30 [INF] HTTP GET /api/Student/search responded 200 in 201.7359 ms
+2025-03-02 18:37:08.572 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/api/Student/search?sortBy=FirstName%20Meet&sortOrder=asc&pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 214.5111ms
+2025-03-02 18:37:41.865 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/api/Student/search?sortBy=LastName&sortOrder=asc&pageNumber=1&pageSize=10 - null null
+2025-03-02 18:37:41.887 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project)'
+2025-03-02 18:37:41.889 +05:30 [INF] Route matched with {action = "GetAllStudents", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllStudents(System.String, System.String, System.String, Int32, Int32) on controller StudentCorewebAPI_Project.Controllers.StudentController (StudentCorewebAPI_Project).
+2025-03-02 18:37:41.895 +05:30 [INF] Fetching students with search, sorting, and pagination - Query: , SortBy: LastName, SortOrder: asc, Page: 1, Size: 10
+2025-03-02 18:37:41.955 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Email], [s].[FirstName], [s].[IsDeleted], [s].[LastName], [s].[Mobile]
+FROM [Students] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [s].[LastName]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2025-03-02 18:37:41.962 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.Models.ApiResponse`1[[System.Collections.Generic.List`1[[StudentCorewebAPI_Project.Models.Student, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-02 18:37:41.964 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project) in 71.4057ms
+2025-03-02 18:37:41.979 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project)'
+2025-03-02 18:37:41.986 +05:30 [INF] HTTP GET /api/Student/search responded 200 in 98.4605 ms
+2025-03-02 18:37:41.989 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/api/Student/search?sortBy=LastName&sortOrder=asc&pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 126.5375ms
+2025-03-02 18:38:07.679 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/api/Student/search?sortBy=LastName&sortOrder=Desc&pageNumber=1&pageSize=10 - null null
+2025-03-02 18:38:07.686 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project)'
+2025-03-02 18:38:07.689 +05:30 [INF] Route matched with {action = "GetAllStudents", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllStudents(System.String, System.String, System.String, Int32, Int32) on controller StudentCorewebAPI_Project.Controllers.StudentController (StudentCorewebAPI_Project).
+2025-03-02 18:38:07.701 +05:30 [INF] Fetching students with search, sorting, and pagination - Query: , SortBy: LastName, SortOrder: Desc, Page: 1, Size: 10
+2025-03-02 18:38:07.717 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Email], [s].[FirstName], [s].[IsDeleted], [s].[LastName], [s].[Mobile]
+FROM [Students] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [s].[LastName]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2025-03-02 18:38:07.725 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.Models.ApiResponse`1[[System.Collections.Generic.List`1[[StudentCorewebAPI_Project.Models.Student, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-02 18:38:07.728 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project) in 32.1961ms
+2025-03-02 18:38:07.732 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project)'
+2025-03-02 18:38:07.734 +05:30 [INF] HTTP GET /api/Student/search responded 200 in 48.4998 ms
+2025-03-02 18:38:07.737 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/api/Student/search?sortBy=LastName&sortOrder=Desc&pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 58.8992ms
+2025-03-02 18:38:27.807 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/api/Student/search?sortBy=LastName&sortOrder=desc&pageNumber=1&pageSize=10 - null null
+2025-03-02 18:38:27.815 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project)'
+2025-03-02 18:38:27.817 +05:30 [INF] Route matched with {action = "GetAllStudents", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllStudents(System.String, System.String, System.String, Int32, Int32) on controller StudentCorewebAPI_Project.Controllers.StudentController (StudentCorewebAPI_Project).
+2025-03-02 18:38:27.822 +05:30 [INF] Fetching students with search, sorting, and pagination - Query: , SortBy: LastName, SortOrder: desc, Page: 1, Size: 10
+2025-03-02 18:38:27.872 +05:30 [INF] Executed DbCommand (23ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Email], [s].[FirstName], [s].[IsDeleted], [s].[LastName], [s].[Mobile]
+FROM [Students] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [s].[LastName] DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2025-03-02 18:38:27.878 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.Models.ApiResponse`1[[System.Collections.Generic.List`1[[StudentCorewebAPI_Project.Models.Student, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-02 18:38:27.881 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project) in 60.2555ms
+2025-03-02 18:38:27.884 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project)'
+2025-03-02 18:38:27.897 +05:30 [INF] HTTP GET /api/Student/search responded 200 in 82.1807 ms
+2025-03-02 18:38:27.900 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/api/Student/search?sortBy=LastName&sortOrder=desc&pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 93.1286ms
+2025-03-02 18:39:07.936 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/Student - application/json 87
+2025-03-02 18:39:07.959 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.AddStudent (StudentCorewebAPI_Project)'
+2025-03-02 18:39:07.988 +05:30 [INF] Route matched with {action = "AddStudent", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddStudent(StudentCorewebAPI_Project.DTOs.AddStudentDto) on controller StudentCorewebAPI_Project.Controllers.StudentController (StudentCorewebAPI_Project).
+2025-03-02 18:39:08.146 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-03-02 18:39:08.203 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.StudentController.AddStudent (StudentCorewebAPI_Project) in 210.1561ms
+2025-03-02 18:39:08.215 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.AddStudent (StudentCorewebAPI_Project)'
+2025-03-02 18:39:08.219 +05:30 [INF] HTTP POST /api/Student responded 400 in 261.4229 ms
+2025-03-02 18:39:08.222 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/Student - 400 null application/problem+json; charset=utf-8 287.4237ms
+2025-03-02 18:42:20.027 +05:30 [INF] Now listening on: https://localhost:7047
+2025-03-02 18:42:20.104 +05:30 [INF] Now listening on: http://localhost:5118
+2025-03-02 18:42:20.849 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-02 18:42:20.857 +05:30 [INF] Hosting environment: Development
+2025-03-02 18:42:20.859 +05:30 [INF] Content root path: C:\Users\DELL\source\repos\StudentCorewebAPI_Project\StudentCorewebAPI_Project
+2025-03-02 18:42:21.227 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.html - null null
+2025-03-02 18:42:21.680 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.html - 200 null text/html;charset=utf-8 468.2299ms
+2025-03-02 18:42:21.716 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-02 18:42:21.716 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.js - null null
+2025-03-02 18:42:21.727 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_vs/browserLink - null null
+2025-03-02 18:42:21.737 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.js - 200 null application/javascript;charset=utf-8 21.9589ms
+2025-03-02 18:42:21.751 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 35.8794ms
+2025-03-02 18:42:21.822 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_vs/browserLink - 200 null text/javascript; charset=UTF-8 95.4768ms
+2025-03-02 18:42:22.067 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - null null
+2025-03-02 18:42:22.106 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 39.5421ms
+2025-03-02 18:45:47.036 +05:30 [INF] Now listening on: https://localhost:7047
+2025-03-02 18:45:47.149 +05:30 [INF] Now listening on: http://localhost:5118
+2025-03-02 18:45:47.402 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-02 18:45:47.404 +05:30 [INF] Hosting environment: Development
+2025-03-02 18:45:47.406 +05:30 [INF] Content root path: C:\Users\DELL\source\repos\StudentCorewebAPI_Project\StudentCorewebAPI_Project
+2025-03-02 18:45:48.038 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.html - null null
+2025-03-02 18:45:48.416 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.html - 200 null text/html;charset=utf-8 394.1028ms
+2025-03-02 18:45:48.459 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.js - null null
+2025-03-02 18:45:48.459 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-02 18:45:48.471 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_vs/browserLink - null null
+2025-03-02 18:45:48.471 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.js - 200 null application/javascript;charset=utf-8 12.6765ms
+2025-03-02 18:45:48.516 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 56.9439ms
+2025-03-02 18:45:48.572 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_vs/browserLink - 200 null text/javascript; charset=UTF-8 101.2571ms
+2025-03-02 18:45:48.831 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - null null
+2025-03-02 18:45:48.867 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 36.1697ms
+2025-03-02 19:00:09.792 +05:30 [INF] Now listening on: https://localhost:7047
+2025-03-02 19:00:09.876 +05:30 [INF] Now listening on: http://localhost:5118
+2025-03-02 19:00:10.101 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-02 19:00:10.104 +05:30 [INF] Hosting environment: Development
+2025-03-02 19:00:10.106 +05:30 [INF] Content root path: C:\Users\DELL\source\repos\StudentCorewebAPI_Project\StudentCorewebAPI_Project
+2025-03-02 19:00:11.314 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.html - null null
+2025-03-02 19:00:11.719 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.html - 200 null text/html;charset=utf-8 420.9462ms
+2025-03-02 19:00:11.758 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.js - null null
+2025-03-02 19:00:11.758 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-02 19:00:11.771 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.js - 200 null application/javascript;charset=utf-8 13.4489ms
+2025-03-02 19:00:11.788 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_vs/browserLink - null null
+2025-03-02 19:00:11.794 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 36.9464ms
+2025-03-02 19:00:11.872 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_vs/browserLink - 200 null text/javascript; charset=UTF-8 84.6028ms
+2025-03-02 19:00:12.125 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - null null
+2025-03-02 19:00:12.150 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 25.502ms
+2025-03-02 19:01:05.331 +05:30 [INF] Now listening on: https://localhost:7047
+2025-03-02 19:01:05.397 +05:30 [INF] Now listening on: http://localhost:5118
+2025-03-02 19:01:05.578 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-02 19:01:05.581 +05:30 [INF] Hosting environment: Development
+2025-03-02 19:01:05.583 +05:30 [INF] Content root path: C:\Users\DELL\source\repos\StudentCorewebAPI_Project\StudentCorewebAPI_Project
+2025-03-02 19:01:06.349 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.html - null null
+2025-03-02 19:01:06.677 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.html - 200 null text/html;charset=utf-8 341.8926ms
+2025-03-02 19:01:06.711 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-02 19:01:06.711 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.js - null null
+2025-03-02 19:01:06.720 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_vs/browserLink - null null
+2025-03-02 19:01:06.725 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.js - 200 null application/javascript;charset=utf-8 13.9758ms
+2025-03-02 19:01:06.737 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 27.4437ms
+2025-03-02 19:01:06.815 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_vs/browserLink - 200 null text/javascript; charset=UTF-8 95.1293ms
+2025-03-02 19:01:07.072 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - null null
+2025-03-02 19:01:07.126 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 54.9675ms
+2025-03-02 19:11:09.035 +05:30 [INF] Now listening on: https://localhost:7047
+2025-03-02 19:11:09.124 +05:30 [INF] Now listening on: http://localhost:5118
+2025-03-02 19:11:09.507 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-02 19:11:09.510 +05:30 [INF] Hosting environment: Development
+2025-03-02 19:11:09.513 +05:30 [INF] Content root path: C:\Users\DELL\source\repos\StudentCorewebAPI_Project\StudentCorewebAPI_Project
+2025-03-02 19:11:10.146 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.html - null null
+2025-03-02 19:11:10.527 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.html - 200 null text/html;charset=utf-8 402.0182ms
+2025-03-02 19:11:10.623 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.js - null null
+2025-03-02 19:11:10.623 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-02 19:11:10.636 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.js - 200 null application/javascript;charset=utf-8 13.1004ms
+2025-03-02 19:11:10.660 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_vs/browserLink - null null
+2025-03-02 19:11:10.682 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 59.113ms
+2025-03-02 19:11:10.761 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_vs/browserLink - 200 null text/javascript; charset=UTF-8 101.6502ms
+2025-03-02 19:11:11.115 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - null null
+2025-03-02 19:11:11.152 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 36.9015ms
+2025-03-02 19:11:39.995 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/api/Student/search?sortBy=FirstName&sortOrder=desc&pageNumber=1&pageSize=10 - null null
+2025-03-02 19:11:40.040 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project)'
+2025-03-02 19:11:40.119 +05:30 [INF] Route matched with {action = "GetAllStudents", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllStudents(System.String, System.String, System.String, Int32, Int32) on controller StudentCorewebAPI_Project.Controllers.StudentController (StudentCorewebAPI_Project).
+2025-03-02 19:11:40.780 +05:30 [INF] Fetching students with search, sorting, and pagination - Query: , SortBy: FirstName, SortOrder: desc, Page: 1, Size: 10
+2025-03-02 19:11:43.526 +05:30 [INF] Executed DbCommand (330ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Email], [s].[FirstName], [s].[IsDeleted], [s].[LastName], [s].[Mobile]
+FROM [Students] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [s].[FirstName] DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2025-03-02 19:11:43.702 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.Models.ApiResponse`1[[System.Collections.Generic.List`1[[StudentCorewebAPI_Project.Models.Student, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-02 19:11:43.747 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project) in 3616.1886ms
+2025-03-02 19:11:43.750 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project)'
+2025-03-02 19:11:43.759 +05:30 [INF] HTTP GET /api/Student/search responded 200 in 3725.2141 ms
+2025-03-02 19:11:43.782 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/api/Student/search?sortBy=FirstName&sortOrder=desc&pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 3787.721ms
+2025-03-02 19:12:05.547 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/Student - application/json 87
+2025-03-02 19:12:05.568 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.AddStudent (StudentCorewebAPI_Project)'
+2025-03-02 19:12:05.587 +05:30 [INF] Route matched with {action = "AddStudent", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddStudent(StudentCorewebAPI_Project.DTOs.AddStudentDto) on controller StudentCorewebAPI_Project.Controllers.StudentController (StudentCorewebAPI_Project).
+2025-03-02 19:12:05.717 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-03-02 19:12:05.771 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.StudentController.AddStudent (StudentCorewebAPI_Project) in 177.3819ms
+2025-03-02 19:12:05.776 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.AddStudent (StudentCorewebAPI_Project)'
+2025-03-02 19:12:05.778 +05:30 [INF] HTTP POST /api/Student responded 400 in 210.4850 ms
+2025-03-02 19:12:05.783 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/Student - 400 null application/problem+json; charset=utf-8 236.247ms
+2025-03-02 19:12:44.183 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/Student - application/json 107
+2025-03-02 19:12:44.215 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.AddStudent (StudentCorewebAPI_Project)'
+2025-03-02 19:12:44.224 +05:30 [INF] Route matched with {action = "AddStudent", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddStudent(StudentCorewebAPI_Project.DTOs.AddStudentDto) on controller StudentCorewebAPI_Project.Controllers.StudentController (StudentCorewebAPI_Project).
+2025-03-02 19:12:44.243 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-03-02 19:12:44.247 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.StudentController.AddStudent (StudentCorewebAPI_Project) in 15.6475ms
+2025-03-02 19:12:44.252 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.AddStudent (StudentCorewebAPI_Project)'
+2025-03-02 19:12:44.255 +05:30 [INF] HTTP POST /api/Student responded 400 in 40.8140 ms
+2025-03-02 19:12:44.259 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/Student - 400 null application/problem+json; charset=utf-8 77.7028ms
+2025-03-02 19:12:58.153 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7047/api/Student - application/json 105
+2025-03-02 19:12:58.160 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.AddStudent (StudentCorewebAPI_Project)'
+2025-03-02 19:12:58.162 +05:30 [INF] Route matched with {action = "AddStudent", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddStudent(StudentCorewebAPI_Project.DTOs.AddStudentDto) on controller StudentCorewebAPI_Project.Controllers.StudentController (StudentCorewebAPI_Project).
+2025-03-02 19:12:58.177 +05:30 [INF] Adding a new student: Karan.k@gmail.com
+2025-03-02 19:12:58.575 +05:30 [INF] Executed DbCommand (86ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Students] ([Id], [Email], [FirstName], [IsDeleted], [LastName], [Mobile])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-03-02 19:12:58.620 +05:30 [INF] Student added successfully: Karan.k@gmail.com
+2025-03-02 19:12:58.632 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'StudentCorewebAPI_Project.Models.ApiResponse`1[[StudentCorewebAPI_Project.DTOs.StudentDto, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-02 19:12:58.692 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.StudentController.AddStudent (StudentCorewebAPI_Project) in 523.9368ms
+2025-03-02 19:12:58.696 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.AddStudent (StudentCorewebAPI_Project)'
+2025-03-02 19:12:58.699 +05:30 [INF] HTTP POST /api/Student responded 201 in 539.1751 ms
+2025-03-02 19:12:58.703 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7047/api/Student - 201 null application/json; charset=utf-8 551.6245ms
+2025-03-02 19:16:00.480 +05:30 [INF] Now listening on: https://localhost:7047
+2025-03-02 19:16:00.553 +05:30 [INF] Now listening on: http://localhost:5118
+2025-03-02 19:16:00.755 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-02 19:16:00.759 +05:30 [INF] Hosting environment: Development
+2025-03-02 19:16:00.762 +05:30 [INF] Content root path: C:\Users\DELL\source\repos\StudentCorewebAPI_Project\StudentCorewebAPI_Project
+2025-03-02 19:16:01.564 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.html - null null
+2025-03-02 19:16:01.952 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.html - 200 null text/html;charset=utf-8 403.7836ms
+2025-03-02 19:16:01.992 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.js - null null
+2025-03-02 19:16:01.992 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-02 19:16:02.006 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.js - 200 null application/javascript;charset=utf-8 14.0105ms
+2025-03-02 19:16:02.015 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_vs/browserLink - null null
+2025-03-02 19:16:02.059 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 67.5646ms
+2025-03-02 19:16:02.123 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_vs/browserLink - 200 null text/javascript; charset=UTF-8 110.0725ms
+2025-03-02 19:16:02.364 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - null null
+2025-03-02 19:16:02.397 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 33.7487ms
+2025-03-02 19:30:01.613 +05:30 [INF] Now listening on: https://localhost:7047
+2025-03-02 19:30:01.701 +05:30 [INF] Now listening on: http://localhost:5118
+2025-03-02 19:30:01.896 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-02 19:30:01.900 +05:30 [INF] Hosting environment: Development
+2025-03-02 19:30:01.901 +05:30 [INF] Content root path: C:\Users\DELL\source\repos\StudentCorewebAPI_Project\StudentCorewebAPI_Project
+2025-03-02 19:30:04.155 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.html - null null
+2025-03-02 19:30:05.072 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.html - 200 null text/html;charset=utf-8 943.9786ms
+2025-03-02 19:30:05.154 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-02 19:30:05.154 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/index.js - null null
+2025-03-02 19:30:05.154 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/_vs/browserLink - null null
+2025-03-02 19:30:05.199 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_framework/aspnetcore-browser-refresh.js - 200 13786 application/javascript; charset=utf-8 45.7745ms
+2025-03-02 19:30:05.199 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/index.js - 200 null application/javascript;charset=utf-8 45.4829ms
+2025-03-02 19:30:05.454 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/_vs/browserLink - 200 null text/javascript; charset=UTF-8 301.0447ms
+2025-03-02 19:30:05.655 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - null null
+2025-03-02 19:30:05.723 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 68.4654ms
+2025-03-02 19:31:05.616 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/api/Student/search?sortBy=FirstName&sortOrder=asc&pageNumber=1&pageSize=10 - null null
+2025-03-02 19:31:05.646 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project)'
+2025-03-02 19:31:05.712 +05:30 [INF] Route matched with {action = "GetAllStudents", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllStudents(System.String, System.String, System.String, Int32, Int32) on controller StudentCorewebAPI_Project.Controllers.StudentController (StudentCorewebAPI_Project).
+2025-03-02 19:31:06.320 +05:30 [INF] Fetching students with search, sorting, and pagination - Query: , SortBy: FirstName, SortOrder: asc, Page: 1, Size: 10
+2025-03-02 19:31:08.785 +05:30 [INF] Executed DbCommand (253ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Email], [s].[FirstName], [s].[IsDeleted], [s].[LastName], [s].[Mobile]
+FROM [Students] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [s].[FirstName]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2025-03-02 19:31:08.946 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.Models.ApiResponse`1[[System.Collections.Generic.List`1[[StudentCorewebAPI_Project.Models.Student, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-02 19:31:08.985 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project) in 3262.6058ms
+2025-03-02 19:31:08.988 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project)'
+2025-03-02 19:31:08.995 +05:30 [INF] HTTP GET /api/Student/search responded 200 in 3354.7887 ms
+2025-03-02 19:31:09.013 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/api/Student/search?sortBy=FirstName&sortOrder=asc&pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 3397.5854ms
+2025-03-02 19:31:32.295 +05:30 [INF] Request starting HTTP/2 DELETE https://localhost:7047/api/Student/8249b10d-167a-4ae8-9017-59c5b9c6820c - null null
+2025-03-02 19:31:32.303 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.DeleteStudent (StudentCorewebAPI_Project)'
+2025-03-02 19:31:32.323 +05:30 [INF] Route matched with {action = "DeleteStudent", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteStudent(System.Guid) on controller StudentCorewebAPI_Project.Controllers.StudentController (StudentCorewebAPI_Project).
+2025-03-02 19:31:32.337 +05:30 [INF] Attempting to soft delete student with ID: "8249b10d-167a-4ae8-9017-59c5b9c6820c"
+2025-03-02 19:31:32.463 +05:30 [INF] Executed DbCommand (36ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Email], [s].[FirstName], [s].[IsDeleted], [s].[LastName], [s].[Mobile]
+FROM [Students] AS [s]
+WHERE [s].[Id] = @__id_0 AND [s].[IsDeleted] = CAST(0 AS bit)
+2025-03-02 19:31:32.482 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Email], [s].[FirstName], [s].[IsDeleted], [s].[LastName], [s].[Mobile]
+FROM [Students] AS [s]
+WHERE [s].[Id] = @__id_0 AND [s].[IsDeleted] = CAST(0 AS bit)
+2025-03-02 19:31:32.695 +05:30 [INF] Executed DbCommand (38ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Students] SET [IsDeleted] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2025-03-02 19:31:32.728 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.Models.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-02 19:31:32.737 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.StudentController.DeleteStudent (StudentCorewebAPI_Project) in 407.369ms
+2025-03-02 19:31:32.742 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.DeleteStudent (StudentCorewebAPI_Project)'
+2025-03-02 19:31:32.744 +05:30 [INF] HTTP DELETE /api/Student/8249b10d-167a-4ae8-9017-59c5b9c6820c responded 200 in 441.7139 ms
+2025-03-02 19:31:32.750 +05:30 [INF] Request finished HTTP/2 DELETE https://localhost:7047/api/Student/8249b10d-167a-4ae8-9017-59c5b9c6820c - 200 null application/json; charset=utf-8 455.3633ms
+2025-03-02 19:31:38.809 +05:30 [INF] Request starting HTTP/2 DELETE https://localhost:7047/api/Student/8249b10d-167a-4ae8-9017-59c5b9c6820d - null null
+2025-03-02 19:31:38.817 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.DeleteStudent (StudentCorewebAPI_Project)'
+2025-03-02 19:31:38.824 +05:30 [INF] Route matched with {action = "DeleteStudent", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteStudent(System.Guid) on controller StudentCorewebAPI_Project.Controllers.StudentController (StudentCorewebAPI_Project).
+2025-03-02 19:31:38.841 +05:30 [INF] Attempting to soft delete student with ID: "8249b10d-167a-4ae8-9017-59c5b9c6820d"
+2025-03-02 19:31:38.952 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Email], [s].[FirstName], [s].[IsDeleted], [s].[LastName], [s].[Mobile]
+FROM [Students] AS [s]
+WHERE [s].[Id] = @__id_0 AND [s].[IsDeleted] = CAST(0 AS bit)
+2025-03-02 19:31:38.966 +05:30 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-02 19:31:38.976 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.StudentController.DeleteStudent (StudentCorewebAPI_Project) in 146.4258ms
+2025-03-02 19:31:38.980 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.DeleteStudent (StudentCorewebAPI_Project)'
+2025-03-02 19:31:38.982 +05:30 [INF] HTTP DELETE /api/Student/8249b10d-167a-4ae8-9017-59c5b9c6820d responded 404 in 164.4875 ms
+2025-03-02 19:31:38.985 +05:30 [INF] Request finished HTTP/2 DELETE https://localhost:7047/api/Student/8249b10d-167a-4ae8-9017-59c5b9c6820d - 404 null application/json; charset=utf-8 176.6333ms
+2025-03-02 23:00:35.995 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/api/Student/search?query=FristName%3D%22meet%22&sortBy=FirstName&sortOrder=asc&pageNumber=1&pageSize=10 - null null
+2025-03-02 23:00:36.041 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project)'
+2025-03-02 23:00:36.057 +05:30 [INF] Route matched with {action = "GetAllStudents", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllStudents(System.String, System.String, System.String, Int32, Int32) on controller StudentCorewebAPI_Project.Controllers.StudentController (StudentCorewebAPI_Project).
+2025-03-02 23:00:36.111 +05:30 [INF] Fetching students with search, sorting, and pagination - Query: FristName="meet", SortBy: FirstName, SortOrder: asc, Page: 1, Size: 10
+2025-03-02 23:00:36.541 +05:30 [INF] Executed DbCommand (152ms) [Parameters=[@__searchTerm_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Email], [s].[FirstName], [s].[IsDeleted], [s].[LastName], [s].[Mobile]
+FROM [Students] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit) AND ([s].[FirstName] LIKE @__searchTerm_0_contains ESCAPE N'\' OR [s].[LastName] LIKE @__searchTerm_0_contains ESCAPE N'\' OR [s].[Email] LIKE @__searchTerm_0_contains ESCAPE N'\')
+ORDER BY [s].[FirstName]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2025-03-02 23:00:36.554 +05:30 [INF] Executing NotFoundObjectResult, writing value of type 'StudentCorewebAPI_Project.Models.ApiResponse`1[[System.Collections.Generic.List`1[[StudentCorewebAPI_Project.Models.Student, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-02 23:00:36.569 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project) in 506.6299ms
+2025-03-02 23:00:36.573 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project)'
+2025-03-02 23:00:36.575 +05:30 [INF] HTTP GET /api/Student/search responded 404 in 538.3826 ms
+2025-03-02 23:00:36.579 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/api/Student/search?query=FristName%3D%22meet%22&sortBy=FirstName&sortOrder=asc&pageNumber=1&pageSize=10 - 404 null application/json; charset=utf-8 590.8931ms
+2025-03-02 23:00:46.165 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/api/Student/search?query=FristName%3Dmeet&sortBy=FirstName&sortOrder=asc&pageNumber=1&pageSize=10 - null null
+2025-03-02 23:00:46.179 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project)'
+2025-03-02 23:00:46.186 +05:30 [INF] Route matched with {action = "GetAllStudents", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllStudents(System.String, System.String, System.String, Int32, Int32) on controller StudentCorewebAPI_Project.Controllers.StudentController (StudentCorewebAPI_Project).
+2025-03-02 23:00:46.196 +05:30 [INF] Fetching students with search, sorting, and pagination - Query: FristName=meet, SortBy: FirstName, SortOrder: asc, Page: 1, Size: 10
+2025-03-02 23:00:46.234 +05:30 [INF] Executed DbCommand (26ms) [Parameters=[@__searchTerm_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Email], [s].[FirstName], [s].[IsDeleted], [s].[LastName], [s].[Mobile]
+FROM [Students] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit) AND ([s].[FirstName] LIKE @__searchTerm_0_contains ESCAPE N'\' OR [s].[LastName] LIKE @__searchTerm_0_contains ESCAPE N'\' OR [s].[Email] LIKE @__searchTerm_0_contains ESCAPE N'\')
+ORDER BY [s].[FirstName]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2025-03-02 23:00:46.239 +05:30 [INF] Executing NotFoundObjectResult, writing value of type 'StudentCorewebAPI_Project.Models.ApiResponse`1[[System.Collections.Generic.List`1[[StudentCorewebAPI_Project.Models.Student, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-02 23:00:46.243 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project) in 49.4875ms
+2025-03-02 23:00:46.247 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project)'
+2025-03-02 23:00:46.249 +05:30 [INF] HTTP GET /api/Student/search responded 404 in 70.4060 ms
+2025-03-02 23:00:46.253 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/api/Student/search?query=FristName%3Dmeet&sortBy=FirstName&sortOrder=asc&pageNumber=1&pageSize=10 - 404 null application/json; charset=utf-8 88.925ms
+2025-03-02 23:00:52.807 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/api/Student/search?sortBy=FirstName&sortOrder=asc&pageNumber=1&pageSize=10 - null null
+2025-03-02 23:00:52.813 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project)'
+2025-03-02 23:00:52.816 +05:30 [INF] Route matched with {action = "GetAllStudents", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllStudents(System.String, System.String, System.String, Int32, Int32) on controller StudentCorewebAPI_Project.Controllers.StudentController (StudentCorewebAPI_Project).
+2025-03-02 23:00:52.821 +05:30 [INF] Fetching students with search, sorting, and pagination - Query: , SortBy: FirstName, SortOrder: asc, Page: 1, Size: 10
+2025-03-02 23:00:52.865 +05:30 [INF] Executed DbCommand (35ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Email], [s].[FirstName], [s].[IsDeleted], [s].[LastName], [s].[Mobile]
+FROM [Students] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [s].[FirstName]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2025-03-02 23:00:52.876 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.Models.ApiResponse`1[[System.Collections.Generic.List`1[[StudentCorewebAPI_Project.Models.Student, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-02 23:00:52.883 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project) in 63.108ms
+2025-03-02 23:00:52.888 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project)'
+2025-03-02 23:00:52.890 +05:30 [INF] HTTP GET /api/Student/search responded 200 in 77.1153 ms
+2025-03-02 23:00:52.894 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/api/Student/search?sortBy=FirstName&sortOrder=asc&pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 86.7336ms
+2025-03-02 23:01:24.943 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/api/Student/search?sortBy=FirstName&sortOrder=asc&pageNumber=1&pageSize=10 - null null
+2025-03-02 23:01:25.011 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project)'
+2025-03-02 23:01:25.014 +05:30 [INF] Route matched with {action = "GetAllStudents", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllStudents(System.String, System.String, System.String, Int32, Int32) on controller StudentCorewebAPI_Project.Controllers.StudentController (StudentCorewebAPI_Project).
+2025-03-02 23:01:25.020 +05:30 [INF] Fetching students with search, sorting, and pagination - Query: , SortBy: FirstName, SortOrder: asc, Page: 1, Size: 10
+2025-03-02 23:01:25.036 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Email], [s].[FirstName], [s].[IsDeleted], [s].[LastName], [s].[Mobile]
+FROM [Students] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [s].[FirstName]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2025-03-02 23:01:25.060 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.Models.ApiResponse`1[[System.Collections.Generic.List`1[[StudentCorewebAPI_Project.Models.Student, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-02 23:01:25.065 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project) in 46.7832ms
+2025-03-02 23:01:25.069 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project)'
+2025-03-02 23:01:25.071 +05:30 [INF] HTTP GET /api/Student/search responded 200 in 60.0168 ms
+2025-03-02 23:01:25.076 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/api/Student/search?sortBy=FirstName&sortOrder=asc&pageNumber=1&pageSize=10 - 200 null application/json; charset=utf-8 132.3764ms
+2025-03-02 23:01:25.183 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/favicon.ico - null null
+2025-03-02 23:01:25.199 +05:30 [INF] HTTP GET /favicon.ico responded 404 in 1.6523 ms
+2025-03-02 23:01:25.205 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/favicon.ico - 404 0 null 22.5882ms
+2025-03-02 23:01:25.217 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7047/favicon.ico, Response status code: 404
+2025-03-02 23:02:04.879 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7047/api/Student/search?sortBy=FirstName&sortOrder=asc&pageNumber=2&pageSize=10 - null null
+2025-03-02 23:02:04.913 +05:30 [INF] Executing endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project)'
+2025-03-02 23:02:04.916 +05:30 [INF] Route matched with {action = "GetAllStudents", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllStudents(System.String, System.String, System.String, Int32, Int32) on controller StudentCorewebAPI_Project.Controllers.StudentController (StudentCorewebAPI_Project).
+2025-03-02 23:02:04.921 +05:30 [INF] Fetching students with search, sorting, and pagination - Query: , SortBy: FirstName, SortOrder: asc, Page: 2, Size: 10
+2025-03-02 23:02:04.958 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Email], [s].[FirstName], [s].[IsDeleted], [s].[LastName], [s].[Mobile]
+FROM [Students] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [s].[FirstName]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+2025-03-02 23:02:04.964 +05:30 [INF] Executing OkObjectResult, writing value of type 'StudentCorewebAPI_Project.Models.ApiResponse`1[[System.Collections.Generic.List`1[[StudentCorewebAPI_Project.Models.Student, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-02 23:02:04.967 +05:30 [INF] Executed action StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project) in 47.5937ms
+2025-03-02 23:02:04.970 +05:30 [INF] Executed endpoint 'StudentCorewebAPI_Project.Controllers.StudentController.GetAllStudents (StudentCorewebAPI_Project)'
+2025-03-02 23:02:04.973 +05:30 [INF] HTTP GET /api/Student/search responded 200 in 60.4528 ms
+2025-03-02 23:02:04.979 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7047/api/Student/search?sortBy=FirstName&sortOrder=asc&pageNumber=2&pageSize=10 - 200 null application/json; charset=utf-8 99.9066ms

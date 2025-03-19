@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\StudentCorewebAPI_Project.props" />
+</Project>
