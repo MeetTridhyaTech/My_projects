@@ -12,8 +12,14 @@ namespace StudentCorewebAPI_Project.Models
         public string? LastName { get; set; }
         public string Email { get; set; }
         public long? Mobile { get; set; }
+        [JsonIgnore]
         public string? PasswordHash { get; set; }
+        [JsonIgnore]
         public string? PasswordSalt { get; set; }
         public bool IsDeleted { get; set; } = false;
+        public string? RefreshToken { get; set; }
+        public DateTime? RefreshTokenExpiryTime { get; set; }
+        public string? ResetOTP { get; set; }
+        public DateTime? OTPExpiryTime { get; set; }
     }
 }

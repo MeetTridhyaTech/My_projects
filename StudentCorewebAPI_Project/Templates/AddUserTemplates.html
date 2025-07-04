@@ -1,0 +1,451 @@
+﻿<!--<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e0f7fa;
+            padding: 40px;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #ffffff;
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            border: 2px solid #0097a7;
+        }
+
+        h2 {
+            background-color: #0097a7;
+            color: #ffffff;
+            padding: 15px;
+            margin: -30px -30px 20px -30px;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #333333;
+            margin: 10px 0;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #555;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
+        }
+
+        strong {
+            color: #00796b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome to Our System!</h2>
+        <p>Hello <strong>{{FirstName}}</strong>,</p>
+        <p>Welcome! You’ve Been Added to Our Portal</p>
+        <p></p>
+        <p><strong>Email:</strong> {{Email}}</p>
+        <p><strong>Role:</strong> {{RoleName}}</p>
+        <p><strong>Password:</strong> {{Password}}</p>
+        <div class="footer">
+            &copy; {{Year}} User Management System. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .email-wrapper {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 24px;
+            max-width: 600px;
+            width: 100%;
+            overflow: hidden;
+            box-shadow: 0 32px 64px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.1);
+            position: relative;
+        }
+
+            .email-wrapper::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 4px;
+                background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffecd2);
+                background-size: 300% 100%;
+                animation: gradientShift 6s ease-in-out infinite;
+            }
+
+        @keyframes gradientShift {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 40px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .header::after {
+                content: '';
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                right: 0;
+                height: 30px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+            }
+
+        .welcome-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+            .welcome-icon svg {
+                width: 40px;
+                height: 40px;
+                color: white;
+            }
+
+        h1 {
+            color: white;
+            font-size: 32px;
+            font-weight: 700;
+            margin: 0;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+            letter-spacing: -0.5px;
+        }
+
+        .content {
+            padding: 50px 40px 40px;
+        }
+
+        .greeting {
+            font-size: 20px;
+            color: #2d3748;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .welcome-text {
+            font-size: 16px;
+            color: #4a5568;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+
+        .credentials-card {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border-radius: 16px;
+            padding: 28px;
+            margin: 24px 0;
+            border: 1px solid #e2e8f0;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .credentials-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 3px;
+                background: linear-gradient(90deg, #667eea, #764ba2);
+            }
+
+        .credential-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+            padding: 12px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+            .credential-item:last-child {
+                margin-bottom: 0;
+                border-bottom: none;
+            }
+
+        .credential-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+            flex-shrink: 0;
+        }
+
+            .credential-icon svg {
+                width: 20px;
+                height: 20px;
+                color: white;
+            }
+
+        .credential-info {
+            flex: 1;
+        }
+
+        .credential-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: #718096;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .credential-value {
+            font-size: 16px;
+            font-weight: 500;
+            color: #2d3748;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+        }
+
+        .password-value {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid #fed7aa;
+            display: inline-block;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+            .password-value:hover {
+                transform: translateY(-1px);
+                box-shadow: 0 4px 12px rgba(252, 182, 159, 0.4);
+            }
+
+        .security-notice {
+            background: linear-gradient(135deg, #fef5e7 0%, #fed7aa 100%);
+            border: 1px solid #f6ad55;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 24px 0;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .security-icon {
+            width: 24px;
+            height: 24px;
+            color: #c05621;
+            margin-right: 12px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .security-text {
+            font-size: 14px;
+            color: #c05621;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin: 32px 0;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 16px;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+            .cta-button:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 30px rgba(102, 126, 234, 0.4);
+            }
+
+        .footer {
+            background: #f8fafc;
+            padding: 32px 40px;
+            text-align: center;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .footer-text {
+            font-size: 14px;
+            color: #718096;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .company-logo {
+            font-size: 18px;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 10px;
+            }
+
+            .header, .content, .footer {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .credentials-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-wrapper">
+        <div class="header">
+            <div class="welcome-icon">
+                <svg fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z" />
+                    <path d="M10 17l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
+                </svg>
+            </div>
+            <h1>Welcome Aboard!</h1>
+        </div>
+
+        <div class="content">
+            <div class="greeting">Hello <strong>{{FirstName}}</strong>! 👋</div>
+
+            <div class="welcome-text">
+                Congratulations! Your account has been successfully created and you're now part of our platform. We're excited to have you join our community and look forward to seeing what you'll accomplish.
+            </div>
+
+            <div class="credentials-card">
+                <div class="credential-item">
+                    <div class="credential-icon">
+                        <svg fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                        </svg>
+                    </div>
+                    <div class="credential-info">
+                        <div class="credential-label">Email Address</div>
+                        <div class="credential-value">{{Email}}</div>
+                    </div>
+                </div>
+
+                <div class="credential-item">
+                    <div class="credential-icon">
+                        <svg fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                    </div>
+                    <div class="credential-info">
+                        <div class="credential-label">Your Role</div>
+                        <div class="credential-value">{{RoleName}}</div>
+                    </div>
+                </div>
+
+                <div class="credential-item">
+                    <div class="credential-icon">
+                        <svg fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6z" />
+                        </svg>
+                    </div>
+                    <div class="credential-info">
+                        <div class="credential-label">Password</div>
+                        <div class="credential-value">
+                            <span class="password-value">{{Password}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="security-notice">
+                <svg class="security-icon" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z" />
+                    <path d="M11 14h2v2h-2v-2zm0-6h2v4h-2V8z" />
+                </svg>
+                <div class="security-text">
+                    <strong>Important:</strong> Please change your password immediately after your first login for security purposes.
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <a href="#" class="cta-button">Access Your Portal</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="company-logo">User Management System</div>
+            <p class="footer-text">
+                &copy; {{Year}} User Management System. All rights reserved.<br>
+                This email contains confidential information. Please keep your credentials secure.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

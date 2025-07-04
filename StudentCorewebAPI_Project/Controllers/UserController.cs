@@ -10,6 +10,7 @@ using StudentCorewebAPI_Project.Repository_Interface;
 using System;
 using System.Threading.Tasks;
 using StudentCorewebAPI_Project.Enums;
+//using StudentCorewebAPI_Project.Utilities;
 
 namespace StudentCorewebAPI_Project.Controllers
 {
@@ -28,9 +29,29 @@ namespace StudentCorewebAPI_Project.Controllers
             _logger = logger;
             //_mapper = mapper;
         }
-        [Authorize(Roles="Admin,Manager")]
-        [HttpGet("search")]
-        public async Task<IActionResult> GetAllUsers([FromQuery] PaginationParams paginationParams)
+        //[Authorize(Roles="Admin,Manager")]
+        //[HasPermission("Read")]
+        //[HttpPost("search/{menuId}")]
+        //public async Task<IActionResult> GetAllUsers([FromQuery] PaginationParams paginationParams)
+        //{
+
+        //    _logger.LogInformation("Fetching users with Query: {Query}, SortBy: {SortBy}, SortOrder: {SortOrder}, PageNumber: {PageNumber}, PageSize: {PageSize}",
+        //        paginationParams.SearchQuery, paginationParams.SortBy, paginationParams.IsDescending, paginationParams.PageNumber, paginationParams.PageSize);
+
+        //    var response = await _userRepository.GetAllUserAsync(paginationParams);
+
+        //    if (response.Data.Any())
+        //    {
+        //        _logger.LogInformation(ApiMessages.UserRegisterSuccessfully);
+        //        return Ok(response);
+        //    }
+
+        //    _logger.LogWarning("No users found for query: {Query}", paginationParams.SearchQuery);
+        //    return NotFound(response);
+        //}
+        [HasPermission("Read")]
+        [HttpPost("search/{menuId}")]
+        public async Task<IActionResult> GetAllUsers([FromBody] PaginationParams paginationParams)
         {
             _logger.LogInformation("Fetching users with Query: {Query}, SortBy: {SortBy}, SortOrder: {SortOrder}, PageNumber: {PageNumber}, PageSize: {PageSize}",
                 paginationParams.SearchQuery, paginationParams.SortBy, paginationParams.IsDescending, paginationParams.PageNumber, paginationParams.PageSize);
@@ -47,38 +68,64 @@ namespace StudentCorewebAPI_Project.Controllers
             return NotFound(response);
         }
 
-        [Authorize(Roles ="Admin")]
-        [HttpPost]
-        public async Task<ActionResult> AddUser([FromBody] AddUserDto addUser)
+        [HasPermission("Mimic")]
+        //[Authorize(Roles = "Admin")]
+        [HttpGet("mimic/{id:Guid}/{menuId}")]
+        public async Task<IActionResult> MimicUser([FromRoute] Guid id)
         {
-            var response = await _userRepository.AddUserAsync(addUser);
+            _logger.LogInformation("Received mimic request for user ID: {UserId}", id);
+
+            var response = await _userRepository.MimicUserAsync(id);
+
+            if (!response.Success)
+            {
+                _logger.LogWarning("Failed to mimic user with ID: {UserId}. Reason: {Message}", id, response.Message);
+                return NotFound(response);
+            }
+
+            _logger.LogInformation("Successfully mimicked user with ID: {UserId}", id);
+            return Ok(response);
+        }
+
+
+        [HasPermission("Add")]
+        [HttpPost("{menuId}")]
+        public async Task<ActionResult> AddUser([FromBody] AddUserDto addUser, [FromServices] IEmailService emailService)
+        {
+            var response = await _userRepository.AddUserAsync(addUser, emailService);
 
             if (response.Success)
             {
                 _logger.LogInformation(ApiMessages.UserAddedSuccessfully , "with ID: {UserId}", response.Data?.Id);
-                return CreatedAtAction(nameof(GetUser), new { id = response.Data?.Id }, response);
+                return Ok(response);
             }
 
             _logger.LogError(ApiMessages.FailToAddUser);
             return BadRequest(response);
         }
+
         //Add and update marge Api
-        [Authorize (Roles="Admin")]
-        [HttpPost("AddOrUpdate")]
-        public async Task<IActionResult> AddOrUpdateUser([FromQuery] Guid? id, [FromBody] AddUserDto userDto)
+        [HasPermission("Edit")]
+        [HttpPost("AddOrUpdate/{menuId}")]
+        public async Task<IActionResult> AddOrUpdateUser([FromQuery] Guid? id, [FromBody] AddUserDto adduserDto, [FromServices] IEmailService emailService)
         {
-            _logger.LogInformation("Recived Request To AddOrUpdate User. User Id: {User Id}",id ?? Guid.Empty);
-            var response = await _userRepository.AddOrUpdateUserAsync(id, userDto);
-            if(!response.Success)
+            _logger.LogInformation("Received Request To AddOrUpdate User. User Id: {UserId}", id ?? Guid.Empty);
+
+            var response = await _userRepository.AddOrUpdateUserAsync(id, adduserDto,emailService);
+
+            if (!response.Success)
             {
-                _logger.LogWarning("Failed To AddOrUpdate User. Error: {ErrorMessage}",response.Message);
+                _logger.LogWarning("Failed To AddOrUpdate User. Error: {ErrorMessage}", response.Message);
                 return BadRequest(response);
             }
-            _logger.LogInformation("{Message} User Id: {User Id}",response.Message,response.Data?.Id);
+
+            _logger.LogInformation("{Message} User Id: {UserId}", response.Message, response.Data?.Id);
             return Ok(response);
         }
-        [Authorize(Roles ="Admin,Manager")]
-        [HttpGet("{id:Guid}")]
+
+        //[Authorize(Roles = "Manager")]
+        [HasPermission("Read")]
+        [HttpGet("{id:Guid}/{menuId}")]
         public async Task<ActionResult<ApiResponse<UserDto>>> GetUser([FromRoute] Guid id)
         {
             _logger.LogInformation(ApiMessages.UserRetriveSuccessfully," ID: {UserId}", id);
@@ -93,8 +140,10 @@ namespace StudentCorewebAPI_Project.Controllers
             _logger.LogWarning("User with ID {UserId} not found.", id);
             return NotFound(response);
         }
-        [Authorize(Roles="Admin")]
-        [HttpPut]
+
+        //[Authorize(Roles="Admin")]
+        [HasPermission("Edit")]
+        [HttpPut("{menuId}")]
         public async Task<ActionResult> UpdateUser([FromBody] UpdateUserDto updateUser)
         {
             if (updateUser == null || updateUser.Id == Guid.Empty)
@@ -116,8 +165,9 @@ namespace StudentCorewebAPI_Project.Controllers
             return NotFound(response);
         }
         // SOFT DELETE USER
-        [Authorize(Roles="Admin")]
-        [HttpDelete("{id:Guid}")]
+        //[Authorize(Roles="Admin")]
+        [HasPermission("Delete")]
+        [HttpDelete("{id:Guid}/{menuId}")]
         public async Task<IActionResult> DeleteUser([FromRoute] Guid id)
         {
             _logger.LogInformation(ApiMessages.UserSoftDeleteSuccessfully,"with ID: {UserId}", id);

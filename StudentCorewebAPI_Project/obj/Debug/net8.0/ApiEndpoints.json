@@ -1,6 +1,22 @@
 [
   {
     "ContainingType": "StudentCorewebAPI_Project.Controllers.AuthController",
+    "Method": "ForgotPassword",
+    "RelativePath": "api/auth/forgot-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "StudentCorewebAPI_Project.DTOs.ForgotPasswordRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentCorewebAPI_Project.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "api/auth/login",
     "HttpMethod": "POST",
@@ -10,6 +26,22 @@
       {
         "Name": "loginRequest",
         "Type": "StudentCorewebAPI_Project.Models.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentCorewebAPI_Project.Controllers.AuthController",
+    "Method": "RefreshToken",
+    "RelativePath": "api/auth/referesh-token",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "StudentCorewebAPI_Project.DTOs.RefreshTokenRequestDto",
         "IsRequired": true
       }
     ],
@@ -32,32 +64,541 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "StudentCorewebAPI_Project.Controllers.UserController",
-    "Method": "AddUser",
-    "RelativePath": "api/User",
+    "ContainingType": "StudentCorewebAPI_Project.Controllers.AuthController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/auth/reset-password/{email}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "addUser",
-        "Type": "StudentCorewebAPI_Project.DTOs.AddUserDto",
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "StudentCorewebAPI_Project.DTOs.ResetPasswordRequestDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "StudentCorewebAPI_Project.Controllers.UserController",
-    "Method": "UpdateUser",
-    "RelativePath": "api/User",
+    "ContainingType": "StudentCorewebAPI_Project.Controllers.AuthController",
+    "Method": "VerifyOtp",
+    "RelativePath": "api/auth/verify-otp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "StudentCorewebAPI_Project.DTOs.VerifyOtpOnlyRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentCorewebAPI_Project.Controllers.ChatController",
+    "Method": "GetChatHistory",
+    "RelativePath": "api/Chat/history/{receiverId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "receiverId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentCorewebAPI_Project.Controllers.ChatController",
+    "Method": "SendMessage",
+    "RelativePath": "api/Chat/send",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "StudentCorewebAPI_Project.DTOs.ChatMessageDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentCorewebAPI_Project.Controllers.MenusController",
+    "Method": "SoftDeleteMenu",
+    "RelativePath": "api/Menus/{id}/{menuId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "menuId",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentCorewebAPI_Project.Controllers.MenusController",
+    "Method": "GetAllMenus",
+    "RelativePath": "api/Menus/all/{menuId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "menuId",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentCorewebAPI_Project.Controllers.MenusController",
+    "Method": "AssignRolesToMenu",
+    "RelativePath": "api/Menus/assign-role-to-menu",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "StudentCorewebAPI_Project.DTOs.AssignRolesToMenuDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentCorewebAPI_Project.Controllers.MenusController",
+    "Method": "CreateMenu",
+    "RelativePath": "api/Menus/create/{menuId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "menuDto",
+        "Type": "StudentCorewebAPI_Project.DTOs.MenuDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "menuId",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentCorewebAPI_Project.Controllers.MenusController",
+    "Method": "GetMenusByRole",
+    "RelativePath": "api/Menus/GetMenusByRole/{roleId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentCorewebAPI_Project.Controllers.MenusController",
+    "Method": "UpdateMenu",
+    "RelativePath": "api/Menus/update/{id}/{menuId}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "updateUser",
-        "Type": "StudentCorewebAPI_Project.DTOs.UpdateUserDto",
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "menuDto",
+        "Type": "StudentCorewebAPI_Project.DTOs.MenuDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "menuId",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentCorewebAPI_Project.Controllers.PermissionsController",
+    "Method": "DeletePermission",
+    "RelativePath": "api/Permissions/{id}/{menuId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "menuId",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentCorewebAPI_Project.Controllers.PermissionsController",
+    "Method": "AddPermission",
+    "RelativePath": "api/Permissions/Add/{menuId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newPermission",
+        "Type": "StudentCorewebAPI_Project.Models.Permission",
+        "IsRequired": true
+      },
+      {
+        "Name": "menuId",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentCorewebAPI_Project.Controllers.PermissionsController",
+    "Method": "GetAllPermissions",
+    "RelativePath": "api/Permissions/All/{menuId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "menuId",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentCorewebAPI_Project.Controllers.PermissionsController",
+    "Method": "AssignPermissions",
+    "RelativePath": "api/Permissions/assign",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "StudentCorewebAPI_Project.DTOs.AssignPermissionsDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentCorewebAPI_Project.Controllers.PermissionsController",
+    "Method": "GetPermissionIdsByRoleId",
+    "RelativePath": "api/Permissions/permission-ids-by-role/{roleId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentCorewebAPI_Project.Controllers.PermissionsController",
+    "Method": "RemovePermissionsFromRoleBulk",
+    "RelativePath": "api/Permissions/remove-bulk/{menuId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "StudentCorewebAPI_Project.DTOs.RemovePermissionsDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "menuId",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentCorewebAPI_Project.Controllers.PermissionsController",
+    "Method": "RemovePermissionFromRole",
+    "RelativePath": "api/Permissions/remove/{menuId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "permissionId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "menuId",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentCorewebAPI_Project.Controllers.PermissionsController",
+    "Method": "GetRolesWithPermissions",
+    "RelativePath": "api/Permissions/roles-with-permissions/{menuId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "menuId",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentCorewebAPI_Project.Controllers.PermissionsController",
+    "Method": "UpdateRolePermissions",
+    "RelativePath": "api/Permissions/UpdateRolePermissions",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "StudentCorewebAPI_Project.DTOs.UpdateRolePermissionDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RolesController",
+    "Method": "GetRoleById",
+    "RelativePath": "api/Roles/{id}/{menuId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "menuId",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "StudentCorewebAPI_Project.Models.Role",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RolesController",
+    "Method": "UpdateRole",
+    "RelativePath": "api/Roles/{id}/{menuId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRoleDto",
+        "Type": "StudentCorewebAPI_Project.DTOs.UpdateRoleDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "menuId",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "StudentCorewebAPI_Project.Models.Role",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RolesController",
+    "Method": "DeleteRole",
+    "RelativePath": "api/Roles/{id}/{menuId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "menuId",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RolesController",
+    "Method": "GetAllRoles",
+    "RelativePath": "api/Roles/{menuId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "menuId",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[StudentCorewebAPI_Project.Models.Role, StudentCorewebAPI_Project, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RolesController",
+    "Method": "AddRole",
+    "RelativePath": "api/Roles/{menuId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "role",
+        "Type": "StudentCorewebAPI_Project.Models.Role",
+        "IsRequired": true
+      },
+      {
+        "Name": "menuId",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "StudentCorewebAPI_Project.Models.Role",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RolesController",
+    "Method": "AssignRoles",
+    "RelativePath": "api/Roles/assign/{menuId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "StudentCorewebAPI_Project.DTOs.AssignRolesDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "menuId",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RolesController",
+    "Method": "RemoveRoles",
+    "RelativePath": "api/Roles/remove/{menuId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "StudentCorewebAPI_Project.DTOs.RemoveRolesDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "menuId",
+        "Type": "",
         "IsRequired": true
       }
     ],
@@ -66,7 +607,7 @@
   {
     "ContainingType": "StudentCorewebAPI_Project.Controllers.UserController",
     "Method": "GetUser",
-    "RelativePath": "api/User/{id}",
+    "RelativePath": "api/User/{id}/{menuId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -74,6 +615,11 @@
       {
         "Name": "id",
         "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "menuId",
+        "Type": "",
         "IsRequired": true
       }
     ],
@@ -92,7 +638,7 @@
   {
     "ContainingType": "StudentCorewebAPI_Project.Controllers.UserController",
     "Method": "DeleteUser",
-    "RelativePath": "api/User/{id}",
+    "RelativePath": "api/User/{id}/{menuId}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -101,6 +647,53 @@
         "Name": "id",
         "Type": "System.Guid",
         "IsRequired": true
+      },
+      {
+        "Name": "menuId",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentCorewebAPI_Project.Controllers.UserController",
+    "Method": "AddUser",
+    "RelativePath": "api/User/{menuId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addUser",
+        "Type": "StudentCorewebAPI_Project.DTOs.AddUserDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "menuId",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentCorewebAPI_Project.Controllers.UserController",
+    "Method": "UpdateUser",
+    "RelativePath": "api/User/{menuId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateUser",
+        "Type": "StudentCorewebAPI_Project.DTOs.UpdateUserDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "menuId",
+        "Type": "",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -108,7 +701,7 @@
   {
     "ContainingType": "StudentCorewebAPI_Project.Controllers.UserController",
     "Method": "AddOrUpdateUser",
-    "RelativePath": "api/User/AddOrUpdate",
+    "RelativePath": "api/User/AddOrUpdate/{menuId}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -119,8 +712,34 @@
         "IsRequired": false
       },
       {
-        "Name": "userDto",
+        "Name": "adduserDto",
         "Type": "StudentCorewebAPI_Project.DTOs.AddUserDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "menuId",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentCorewebAPI_Project.Controllers.UserController",
+    "Method": "MimicUser",
+    "RelativePath": "api/User/mimic/{id}/{menuId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "menuId",
+        "Type": "",
         "IsRequired": true
       }
     ],
@@ -129,35 +748,20 @@
   {
     "ContainingType": "StudentCorewebAPI_Project.Controllers.UserController",
     "Method": "GetAllUsers",
-    "RelativePath": "api/User/search",
-    "HttpMethod": "GET",
+    "RelativePath": "api/User/search/{menuId}",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "SearchQuery",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "paginationParams",
+        "Type": "PaginationParams",
+        "IsRequired": true
       },
       {
-        "Name": "SortBy",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "IsDescending",
-        "Type": "System.Boolean",
-        "IsRequired": false
-      },
-      {
-        "Name": "PageNumber",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "PageSize",
-        "Type": "System.Int32",
-        "IsRequired": false
+        "Name": "menuId",
+        "Type": "",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

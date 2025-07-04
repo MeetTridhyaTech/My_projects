@@ -8,4 +8,7 @@
     public Guid RoleID { get; set; }
     public string RoleName { get; set; }
     public string Token { get; set; }
+    public List<string> Permissions { get; set; }
+    public string RefreshToken { get; set; }      // <-- Add Refresh Token here
+
 }

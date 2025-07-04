@@ -8,6 +8,7 @@
         public long? Mobile { get; set; }
         public string Password { get; set; }
         public Guid RoleID { get; set; }
+        //public string RoleName { get; set; }
 
 
     }
