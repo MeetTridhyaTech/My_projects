@@ -206,7 +206,7 @@ namespace StudentCorewebAPI_Project.Repository
             }
 
             var roleName = await _context.Roles
-                .Where(r => r.RoleID == userDto.RoleID)
+                .Where(r => r.RoleID == adduserDto.RoleID)
                 .Select(r => r.RoleName)
                 .FirstOrDefaultAsync();
 
