@@ -56,7 +56,7 @@ namespace StudentCorewebAPI_Project.Services
                 ValidateAudience = true,
                 ValidateIssuer = true,
                 ValidateIssuerSigningKey = true,
-                ValidateLifetime = false, // <-- Important for refresh token
+                ValidateLifetime = false,
 
                 ValidIssuer = _config["JwtSettings:Issuer"],
                 ValidAudience = _config["JwtSettings:Audience"],
