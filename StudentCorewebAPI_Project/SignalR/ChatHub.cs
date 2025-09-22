@@ -109,5 +109,35 @@ namespace StudentCorewebAPI_Project.SignalR
                 await Clients.Client(recieverConnectionId).SendAsync("UserTyping", senderId);
             }
         }
+        public async Task SendOffer(Guid toUserId, string offer)
+        {
+            var fromUserId = GetSenderId();
+            if(_connections.TryGetValue(toUserId, out var toConnectionId))
+            {
+                await Clients.Client(toConnectionId).SendAsync("ReceiveOffer", fromUserId, offer);
+            }
+        }
+        public async Task SendAnswer(Guid toUserId, string answer)
+        {
+            var fromUserId = GetSenderId();
+            if (_connections.TryGetValue(toUserId, out var connectionId))
+            {
+                await Clients.Client(connectionId).SendAsync("ReceiveAnswer", answer, fromUserId);
+            }
+        }
+        public async Task SendIceCandidate(Guid toUserId, string candidate)
+        {
+            var fromUserId = GetSenderId();
+            if (_connections.TryGetValue(toUserId, out var connectionId))
+            {
+                await Clients.Client(connectionId).SendAsync("ReceiveIceCandidate", candidate, fromUserId);
+            }
+        }
+        private Guid GetSenderId()
+        {
+            var senderIdClaim = Context.User?.Claims?.FirstOrDefault(c => c.Type == "UserId");
+            return Guid.TryParse(senderIdClaim?.Value, out var senderId) ? senderId : Guid.Empty;
+        }
+
     }
 }
